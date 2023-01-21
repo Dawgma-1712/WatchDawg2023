@@ -10,17 +10,17 @@
 
 
     <CheckBox
-        android:id="@+id/noClimbAttempt"
-        android:layout_width="204dp"
-        android:layout_height="32dp"
+        android:id="@+id/penalized"
+        android:layout_width="143dp"
+        android:layout_height="54dp"
         android:onClick="onCheckBoxClicked"
-        android:text="No Climb Attempt"
+        android:text="Penalized"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.483" />
 
     <CheckBox
         android:id="@+id/deadBot"
@@ -30,23 +30,10 @@
         android:text="Dead Bot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
-
-    <CheckBox
-        android:id="@+id/penalized"
-        android:layout_width="143dp"
-        android:layout_height="54dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Penalized"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintVertical_bias="0.543" />
 
     <EditText
         android:id="@+id/additionalNotes"
@@ -59,108 +46,43 @@
         app:layout_constraintVertical_bias="0.93" />
 
     <CheckBox
-        android:id="@+id/traversalHangFailure"
-        android:layout_width="156dp"
-        android:layout_height="50dp"
-        android:text="Trav Fail"
-        android:onClick="onCheckBoxClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154" />
-
-    <CheckBox
-        android:id="@+id/highHangFailure"
-        android:layout_width="156dp"
-        android:layout_height="53dp"
-        android:text="High Fail"
-        android:onClick="onCheckBoxClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
-
-    <CheckBox
-        android:id="@+id/highHangSuccess"
+        android:id="@+id/DockedButton"
         android:layout_width="135dp"
         android:layout_height="53dp"
-        android:text="High Success"
         android:onClick="onCheckBoxClicked"
+        android:text="Docked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintVertical_bias="0.317" />
 
     <CheckBox
-        android:id="@+id/midHangFailure"
-        android:layout_width="156dp"
-        android:layout_height="48dp"
-        android:text="Mid Fail"
-        android:onClick="onCheckBoxClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
-
-    <CheckBox
-        android:id="@+id/midHangSuccess"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:text="Mid Success"
-        android:onClick="onCheckBoxClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316" />
-
-    <CheckBox
-        android:id="@+id/lowHangFailure"
-        android:layout_width="158dp"
-        android:layout_height="54dp"
-        android:text="Low Fail"
-        android:onClick="onCheckBoxClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397" />
-
-    <CheckBox
-        android:id="@+id/lowHangSuccess"
-        android:layout_width="135dp"
-        android:layout_height="51dp"
-        android:text="Low Success"
-        android:onClick="onCheckBoxClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
-    <CheckBox
-        android:id="@+id/traversalHangSuccess"
+        android:id="@+id/ParkingButton"
         android:layout_width="139dp"
         android:layout_height="46dp"
-        android:text="Trav Success"
         android:onClick="onCheckBoxClicked"
+        android:text="Parking"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintVertical_bias="0.236" />
+
+    <CheckBox
+        android:id="@+id/EngagedButton"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Engaged"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

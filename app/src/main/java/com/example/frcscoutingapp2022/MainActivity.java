@@ -44,15 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
     public static int AutoDocked = 0;
     public static int AutoEngaged = 0;
-    public static int midFail = 0;
-    public static int midSuccess = 0;
-    public static int highFail = 0;
-    public static int highSuccess = 0;
-    public static int travFail = 0;
-    public static int travSuccess = 0;
+    public static int Parking = 0;
+    public static int TeleopDocked = 0;
+    public static int TeleopEngaged = 0;
     public static int penalty = 0;
     public static int deadBot = 0;
-    public static int noClimbAttempt = 0;
 
     public static int AutoUpperCone = 0;
     public static int AutoUpperCube = 0;
@@ -99,15 +95,12 @@ public class MainActivity extends AppCompatActivity {
 
         AutoDocked = 0;
         AutoEngaged = 0;
-        midFail = 0;
-        midSuccess = 0;
-        highFail = 0;
-        highSuccess = 0;
-        travFail = 0;
-        travSuccess = 0;
+        Parking = 0;
+        TeleopDocked = 0;
+        TeleopEngaged = 0;
         penalty = 0;
         deadBot = 0;
-        noClimbAttempt = 0;
+
 
         AutoUpperCone = 0;
         AutoUpperCube = 0;
@@ -145,44 +138,25 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
 
-            case R.id.midHangFailure:
-                //MainActivity.checkBoxData[10] = checked ? 1 : 0;
-                MainActivity.midFail = checked ? 1 : 0;
-                //((CheckBox)findViewById(R.id.midHangSuccess)).setSelected(false);
-                //MainActivity.midSuccess = 0;
-
-                break;
-            case R.id.midHangSuccess:
+            case R.id.EngagedButton:
                 //MainActivity.checkBoxData[11] = checked ? 1 : 0;
-                MainActivity.midSuccess = checked ? 1 : 0;
+                MainActivity.Parking = checked ? 1 : 0;
 
                 //MainActivity.midFail = 0;
 
                 break;
-            case R.id.highHangFailure:
-                //MainActivity.checkBoxData[12] = checked ? 1 : 0;
-                MainActivity.highFail = checked ? 1 : 0;
-                //view.findViewById(R.id.highHangSuccess).setSelected(false);
-                //MainActivity.highSuccess = 0;
 
-                break;
-            case R.id.highHangSuccess:
+            case R.id.DockedButton:
                 //MainActivity.checkBoxData[13] = checked ? 1 : 0;
-                MainActivity.highSuccess = checked ? 1 : 0;
+                MainActivity.TeleopDocked = checked ? 1 : 0;
                 //view.findViewById(R.id.highHangFailure).setSelected(false);
                 //MainActivity.highFail = 0;
 
                 break;
-            case R.id.traversalHangFailure:
-                //MainActivity.checkBoxData[14] = checked ? 1 : 0;
-                MainActivity.travFail = checked ? 1 : 0;
-                //view.findViewById(R.id.traversalHangSuccess).setSelected(false);
-                ///MainActivity.travSuccess = 0;
 
-                break;
-            case R.id.traversalHangSuccess:
+            case R.id.ParkingButton:
                 //MainActivity.checkBoxData[15] = checked ? 1 : 0;
-                MainActivity.travSuccess = checked ? 1 : 0;
+                MainActivity.TeleopEngaged = checked ? 1 : 0;
                 //view.findViewById(R.id.traversalHangFailure).setSelected(false);
                 //MainActivity.travFail = 0;
 
@@ -202,9 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.deadBot = checked ? 1 : 0;
 
                 break;
-            case R.id.noClimbAttempt:
-                //MainActivity.checkBoxData[19] = checked ? 1 : 0;
-                MainActivity.noClimbAttempt = checked ? 1 : 0;
+
         }
 
 

@@ -125,10 +125,10 @@ public class save extends Fragment implements View.OnClickListener{
 
 
                 data = MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-                        /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + "," + MainActivity.AutoHybridCone + "," + MainActivity.AutoHybridCube + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + ","+ MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopUpperCone + "," + MainActivity.TeleopUpperCube + "," + MainActivity.TeleopHybridCone + "," + MainActivity.TeleopHybridCube + ","
-                        /* Climb */  + MainActivity.AutoDocked + "," + MainActivity.AutoEngaged + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
-                        /* AddInfo*/ + MainActivity.noClimbAttempt + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+                        /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoHybridCone + "," + MainActivity.AutoUpperCube + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoHybridCube + "," + MainActivity.AutoEngaged + ","+ MainActivity.AutoDocked + ","
+                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + ","+ MainActivity.TeleopUpperCone + "," + MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopHybridCone + "," + MainActivity.TeleopUpperCube + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopHybridCube + ","
+                        /* Endgame */    + MainActivity.TeleopEngaged + "," + MainActivity.TeleopDocked +","+ MainActivity.Parking + ","
+                        /* AddInfo*/ + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
                 //Initialize multi format writer
@@ -186,10 +186,10 @@ public class save extends Fragment implements View.OnClickListener{
                 System.out.println(MainActivity.defendedOnByNumber);
 
                 data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-                        /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopUpperCone + "," + MainActivity.TeleopUpperCube + ","
-                        /* Climb */  + MainActivity.AutoDocked + "," + MainActivity.AutoEngaged + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
-                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+                        /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoHybridCone + "," + MainActivity.AutoUpperCube + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoHybridCube + "," + MainActivity.AutoEngaged + ","+ MainActivity.AutoDocked + ","
+                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + ","+ MainActivity.TeleopUpperCone + "," + MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopHybridCone + "," + MainActivity.TeleopUpperCube + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopHybridCube + ","
+                        /* Endgame */    + MainActivity.TeleopEngaged + "," + MainActivity.TeleopDocked +","+ MainActivity.Parking + ","
+                        /* AddInfo*/ + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
                 // Create and save file
