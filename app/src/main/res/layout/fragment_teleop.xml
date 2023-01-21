@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/upperHubTeleopLabel"
+        android:id="@+id/TeleopUpperLabel"
         android:layout_width="78dp"
         android:layout_height="46dp"
         android:text="Upper"
@@ -66,7 +66,7 @@
         <TableRow>
 
             <CheckBox
-                android:id="@+id/defendedOnCheckBox"
+                android:id="@+id/GotDefendedCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:button="@null"
@@ -74,7 +74,7 @@
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 android:onClick="onCheckBoxClicked"
-                android:text="Defended By"
+                android:text="Got Defended"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -84,26 +84,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.06" />
 
-            <EditText
-                android:id="@+id/defendedOnTeamNum"
-                android:layout_width="90dp"
-                android:layout_height="match_parent"
-                android:hint="Team #"
-                android:inputType="number"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.063"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.001" />
-
 
         </TableRow>
     </TableLayout>
 
     <Button
-        android:id="@+id/upperHubTeleopMissedDecrease"
+        android:id="@+id/TeleopUpperCubeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
         android:background="@color/maroon4"
@@ -118,7 +104,7 @@
         app:layout_constraintVertical_bias="0.462" />
 
     <Button
-        android:id="@+id/upperHubTeleopMissedIncrease"
+        android:id="@+id/TeleopUpperCubeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
         android:background="@color/maroon4"
@@ -133,22 +119,7 @@
         app:layout_constraintVertical_bias="0.462" />
 
     <Button
-        android:id="@+id/lowerHubTeleopMissedIncrease"
-        android:layout_width="91dp"
-        android:layout_height="100dp"
-        android:background="@color/maroon4"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
-
-    <Button
-        android:id="@+id/upperHubTeleopScoredDecrease"
+        android:id="@+id/TeleopUpperConeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
         android:background="@color/maroon4"
@@ -163,7 +134,7 @@
         app:layout_constraintVertical_bias="0.459" />
 
     <Button
-        android:id="@+id/upperHubTeleopScoredIncrease"
+        android:id="@+id/TeleopUpperConeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
         android:background="@color/maroon4"
@@ -177,21 +148,245 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.462" />
 
+    <Button
+        android:id="@+id/TeleopMiddleCubeDecrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681" />
+
     <TextView
-        android:id="@+id/AutoMiddleConeLabel"
+        android:id="@+id/TeleopMiddleCubeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scored"
+        android:text="Cube"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <TextView
+        android:id="@+id/TeleopMiddleConeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651" />
+
+    <Button
+        android:id="@+id/TeleopMiddleCubeIncrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <Button
+        android:id="@+id/TeleopMiddleConeDecrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.673" />
+
+    <TextView
+        android:id="@+id/TeleopMiddleConeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cone"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <Button
+        android:id="@+id/TeleopMiddleConeIncrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.673" />
+
+    <TextView
+        android:id="@+id/TeleopMiddleLabel"
+        android:layout_width="82dp"
+        android:layout_height="32dp"
+        android:text="Middle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <TextView
+        android:id="@+id/TeleopMiddleCubeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651" />
+
+    <Button
+        android:id="@+id/TeleopHybridCubeDecrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <Button
+        android:id="@+id/TeleopHybridConeDecrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <Button
+        android:id="@+id/TeleopHybridCubeIncrease"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
+        android:background="@color/maroon4"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <TextView
+        android:id="@+id/TeleopHybridCubeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <TextView
+        android:id="@+id/TeleopHybridLabel"
+        android:layout_width="66dp"
+        android:layout_height="34dp"
+        android:text="Hybrid"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
+
+    <TextView
+        android:id="@+id/TeleopHybridCubeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cube"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786" />
+
+    <TextView
+        android:id="@+id/TeleopHybridConeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <TextView
+        android:id="@+id/TeleopHybridConeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cone"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
+        app:layout_constraintVertical_bias="0.783" />
 
     <Button
-        android:id="@+id/lowerHubTeleopScoredIncrease"
+        android:id="@+id/TeleopHybridConeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
         android:background="@color/maroon4"
@@ -203,10 +398,10 @@
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.919" />
 
     <TextView
-        android:id="@+id/upperHubTeleopScored"
+        android:id="@+id/TeleopUpperConeCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -219,61 +414,7 @@
         app:layout_constraintVertical_bias="0.463" />
 
     <TextView
-        android:id="@+id/lowerHubTeleopMissed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
-
-    <TextView
-        android:id="@+id/lowerHubTeleopScored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
-
-    <Button
-        android:id="@+id/lowerHubTeleopMissedDecrease"
-        android:layout_width="91dp"
-        android:layout_height="100dp"
-        android:background="@color/maroon4"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
-
-    <TextView
-        android:id="@+id/lowerAutoMissed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Missed"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
-
-    <TextView
-        android:id="@+id/upperHubTeleopMissed"
+        android:id="@+id/TeleopUpperCubeCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -285,40 +426,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.463" />
 
-    <Button
-        android:id="@+id/lowerHubTeleopScoredDecrease"
-        android:layout_width="91dp"
-        android:layout_height="100dp"
-        android:background="@color/maroon4"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
-
     <TextView
-        android:id="@+id/lowerHubTeleopLabel"
-        android:layout_width="66dp"
-        android:layout_height="34dp"
-        android:text="Lower"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
-
-    <TextView
-        android:id="@+id/AutoUpperConeLabel"
+        android:id="@+id/TeleopUpperConeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scored"
+        android:text="Cone"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -328,10 +440,10 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <TextView
-        android:id="@+id/AutoUpperCubeLabel"
+        android:id="@+id/TeleopUpperCubeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Missed"
+        android:text="Cube"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

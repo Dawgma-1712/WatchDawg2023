@@ -229,7 +229,7 @@
         app:layout_constraintVertical_bias="0.485" />
 
     <TextView
-        android:id="@+id/AutoUpperConeLabel"
+        android:id="@+id/TeleopUpperConeLabel"
         android:layout_width="60dp"
         android:layout_height="20dp"
         android:gravity="center"
@@ -258,7 +258,7 @@
         app:layout_constraintVertical_bias="0.483" />
 
     <TextView
-        android:id="@+id/AutoUpperCubeLabel"
+        android:id="@+id/TeleopUpperCubeLabel"
         android:layout_width="60dp"
         android:layout_height="20dp"
         android:gravity="center"
@@ -357,7 +357,7 @@
         app:layout_constraintVertical_bias="0.727" />
 
     <TextView
-        android:id="@+id/AutoMiddleConeLabel"
+        android:id="@+id/TeleopMiddleConeLabel"
         android:layout_width="60dp"
         android:layout_height="20dp"
         android:gravity="center"

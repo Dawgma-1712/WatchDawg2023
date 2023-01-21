@@ -7,8 +7,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -16,53 +14,68 @@ public class Teleop extends Fragment implements View.OnClickListener{
 
     //initialize variables
 
-    public static EditText defendedByNum;
 
-    //Initialize upper hub text views
-    private TextView upperHubTeleopScored;
-    private TextView upperHubTeleopMissed;
 
-    //initialize lower hub text views
-    private TextView lowerHubTeleopMissed;
-    private TextView lowerHubTeleopScored;
-    
+    //Initialize upper node text views
+    private TextView TeleopUpperConeText;
+    private TextView TeleopUpperCubeText;
+
+    //initialize middle node text views
+    private TextView TeleopMiddleCubeText;
+    private TextView TeleopMiddleConeText;
+
+    //initializer hybrid node text views
+    private TextView TeleopHybridConeText;
+    private TextView TeleopHybridCubeText;
+
     //counter variables
-    private int upperHubTeleopScoredCounter = 0;
-    private int upperHubTeleopMissedCounter = 0;
-    private int lowerHubTeleopScoredCounter = 0;
-    private int lowerHubTeleopMissedCounter = 0;
+    private int TeleopUpperConeCounter = 0;
+    private int TeleopUpperCubeCounter = 0;
+    private int TeleopMiddleConeCounter = 0;
+    private int TeleopMiddleCubeCounter = 0;
+    private int TeleopHybridConeCounter = 0;
+    private int TeleopHybridCubeCounter = 0;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_teleop, container, false);
 
-        defendedByNum = (EditText) view.findViewById(R.id.defendedOnTeamNum);
-        //Define TextViews
-        upperHubTeleopScored = (TextView) view.findViewById(R.id.upperHubTeleopScored);
-        upperHubTeleopMissed = (TextView) view.findViewById(R.id.upperHubTeleopMissed);
 
-        lowerHubTeleopScored = (TextView) view.findViewById(R.id.lowerHubTeleopScored);
-        lowerHubTeleopMissed = (TextView) view.findViewById(R.id.lowerHubTeleopMissed);
+        //Define TextViews
+        TeleopUpperConeText = (TextView) view.findViewById(R.id.TeleopUpperConeCounter);
+        TeleopUpperCubeText = (TextView) view.findViewById(R.id.TeleopUpperCubeCounter);
+
+        TeleopMiddleConeText = (TextView) view.findViewById(R.id.TeleopMiddleConeCounter);
+        TeleopMiddleCubeText = (TextView) view.findViewById(R.id.TeleopMiddleCubeCounter);
+
+        TeleopHybridConeText = (TextView) view.findViewById(R.id.TeleopHybridConeCounter);
+        TeleopHybridCubeText = (TextView) view.findViewById(R.id.TeleopHybridCubeCounter);
 
 
 
 
 
         //Upper buttons
-        view.findViewById(R.id.upperHubTeleopScoredIncrease).setOnClickListener(this);
-        view.findViewById(R.id.upperHubTeleopScoredDecrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopUpperConeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopUpperConeDecrease).setOnClickListener(this);
 
-        view.findViewById(R.id.upperHubTeleopMissedIncrease).setOnClickListener(this);
-        view.findViewById(R.id.upperHubTeleopMissedDecrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopUpperCubeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopUpperCubeDecrease).setOnClickListener(this);
 
-        //Lower port buttons
-        view.findViewById(R.id.lowerHubTeleopScoredIncrease).setOnClickListener(this);
-        view.findViewById(R.id.lowerHubTeleopScoredDecrease).setOnClickListener(this);
+        //Middle buttons
+        view.findViewById(R.id.TeleopMiddleConeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopMiddleConeDecrease).setOnClickListener(this);
 
-        view.findViewById(R.id.lowerHubTeleopMissedIncrease).setOnClickListener(this);
-        view.findViewById(R.id.lowerHubTeleopMissedDecrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopMiddleCubeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopMiddleCubeDecrease).setOnClickListener(this);
 
+        //Hybrid Buttons
+        view.findViewById(R.id.TeleopHybridConeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopHybridConeDecrease).setOnClickListener(this);
+
+        view.findViewById(R.id.TeleopHybridCubeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.TeleopHybridCubeDecrease).setOnClickListener(this);
 
         return view;
     }
@@ -73,68 +86,102 @@ public class Teleop extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
 
         switch(view.getId()){
-            case R.id.upperHubTeleopScoredIncrease:
+            case R.id.TeleopUpperConeIncrease:
                 System.out.println(MainActivity.checkBoxData);
-                upperHubTeleopScoredCounter++;
-                upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
+                TeleopUpperConeCounter++;
+                TeleopUpperConeText.setText(Integer.toString(TeleopUpperConeCounter));
                 //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] + 1);
-                MainActivity.upperScoredTeleop++;
+                MainActivity.TeleopUpperCone++;
                 break;
 
-            case R.id.upperHubTeleopScoredDecrease:
-                if(upperHubTeleopScoredCounter > 0) {
-                    upperHubTeleopScoredCounter--;
-                    upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
+            case R.id.TeleopUpperConeDecrease:
+                if(TeleopUpperConeCounter > 0) {
+                    TeleopUpperConeCounter--;
+                    TeleopUpperConeText.setText(Integer.toString(TeleopUpperConeCounter));
                     //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] - 1);
-                    MainActivity.upperScoredTeleop--;
+                    MainActivity.TeleopUpperCone--;
                 } break;
 
-            case R.id.upperHubTeleopMissedIncrease:
-                upperHubTeleopMissedCounter++;
-                upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
+            case R.id.TeleopUpperCubeIncrease:
+                TeleopUpperCubeCounter++;
+                TeleopUpperCubeText.setText(Integer.toString(TeleopUpperCubeCounter));
                 //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] + 1);
-                MainActivity.upperMissedTeleop++;
+                MainActivity.TeleopUpperCube++;
                 break;
 
-            case R.id.upperHubTeleopMissedDecrease:
-                if(upperHubTeleopMissedCounter > 0) {
-                    upperHubTeleopMissedCounter--;
-                    upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
+            case R.id.TeleopUpperCubeDecrease:
+                if(TeleopUpperCubeCounter > 0) {
+                    TeleopUpperCubeCounter--;
+                    TeleopUpperCubeText.setText(Integer.toString(TeleopUpperCubeCounter));
                     //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] - 1);
-                    MainActivity.upperMissedTeleop--;
+                    MainActivity.TeleopUpperCube--;
                 } break;
 
-            case R.id.lowerHubTeleopScoredIncrease:
-                lowerHubTeleopScoredCounter++;
-                lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
+            case R.id.TeleopMiddleConeIncrease:
+                TeleopMiddleConeCounter++;
+                TeleopMiddleConeText.setText(Integer.toString(TeleopMiddleConeCounter));
                 //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] + 1);
-                MainActivity.lowerScoredTeleop++;
-                System.out.println(MainActivity.lowerScoredTeleop);
+                MainActivity.TeleopMiddleCone++;
+                System.out.println(MainActivity.TeleopMiddleCone);
                 break;
 
-            case R.id.lowerHubTeleopScoredDecrease:
-                if(lowerHubTeleopScoredCounter > 0) {
-                    lowerHubTeleopScoredCounter--;
-                    lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
+            case R.id.TeleopMiddleConeDecrease:
+                if(TeleopMiddleConeCounter > 0) {
+                    TeleopMiddleConeCounter--;
+                    TeleopMiddleConeText.setText(Integer.toString(TeleopMiddleConeCounter));
                     //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
-                    MainActivity.lowerScoredTeleop--;
-                    System.out.println(MainActivity.lowerScoredTeleop);
+                    MainActivity.TeleopMiddleCone--;
+                    System.out.println(MainActivity.TeleopMiddleCone);
 
                 } break;
 
-            case R.id.lowerHubTeleopMissedIncrease:
-                lowerHubTeleopMissedCounter++;
-                lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+            case R.id.TeleopMiddleCubeIncrease:
+                TeleopMiddleCubeCounter++;
+                TeleopMiddleCubeText.setText(Integer.toString(TeleopMiddleCubeCounter));
                 //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] + 1);
-                MainActivity.lowerMissedTeleop++;
+                MainActivity.TeleopMiddleCube++;
                 break;
 
-            case R.id.lowerHubTeleopMissedDecrease:
-                if(lowerHubTeleopMissedCounter > 0) {
-                    lowerHubTeleopMissedCounter--;
-                    lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+            case R.id.TeleopMiddleCubeDecrease:
+                if(TeleopMiddleCubeCounter > 0) {
+                    TeleopMiddleCubeCounter--;
+                    TeleopMiddleCubeText.setText(Integer.toString(TeleopMiddleCubeCounter));
                     //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
-                    MainActivity.lowerMissedTeleop--;
+                    MainActivity.TeleopMiddleCube--;
+                } break;
+
+            case R.id.TeleopHybridConeIncrease:
+                System.out.print("HIt");
+                TeleopHybridConeCounter++;
+                TeleopHybridConeText.setText(Integer.toString(TeleopHybridConeCounter));
+                //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] + 1);
+                MainActivity.TeleopHybridCone++;
+                System.out.println(MainActivity.TeleopHybridCone);
+                break;
+
+            case R.id.TeleopHybridConeDecrease:
+                if(TeleopHybridConeCounter > 0) {
+                    TeleopHybridConeCounter--;
+                    TeleopHybridConeText.setText(Integer.toString(TeleopHybridConeCounter));
+                    //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
+                    MainActivity.TeleopHybridCone--;
+                    System.out.println(MainActivity.TeleopHybridCone);
+
+                } break;
+
+            case R.id.TeleopHybridCubeIncrease:
+                TeleopHybridCubeCounter++;
+                TeleopHybridCubeText.setText(Integer.toString(TeleopHybridCubeCounter));
+                //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] + 1);
+                MainActivity.TeleopHybridCube++;
+                break;
+
+            case R.id.TeleopHybridCubeDecrease:
+                if(TeleopHybridCubeCounter > 0) {
+                    TeleopHybridCubeCounter--;
+                    TeleopHybridCubeText.setText(Integer.toString(TeleopHybridCubeCounter));
+                    //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
+                    MainActivity.TeleopHybridCube--;
                 } break;
         }
     }
@@ -142,23 +189,30 @@ public class Teleop extends Fragment implements View.OnClickListener{
     public void onResume(){
         super.onResume();
 
-        upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
-        upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
-        lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
-        lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+        TeleopUpperConeText.setText(Integer.toString(TeleopUpperConeCounter));
+        TeleopUpperCubeText.setText(Integer.toString(TeleopUpperCubeCounter));
+        TeleopMiddleConeText.setText(Integer.toString(TeleopMiddleConeCounter));
+        TeleopMiddleCubeText.setText(Integer.toString(TeleopMiddleCubeCounter));
+        TeleopHybridConeText.setText(Integer.toString(TeleopHybridConeCounter));
+        TeleopHybridCubeText.setText(Integer.toString(TeleopHybridCubeCounter));
     }
 
     public void clear(){
-        upperHubTeleopScored.setText(Integer.toString(0));
-        upperHubTeleopMissed.setText(Integer.toString(0));
-        lowerHubTeleopScored.setText(Integer.toString(0));
-        lowerHubTeleopMissed.setText(Integer.toString(0));
+        TeleopUpperConeText.setText(Integer.toString(0));
+        TeleopUpperCubeText.setText(Integer.toString(0));
+        TeleopMiddleConeText.setText(Integer.toString(0));
+        TeleopMiddleCubeText.setText(Integer.toString(0));
+        TeleopHybridConeText.setText(Integer.toString(0));
+        TeleopHybridCubeText.setText(Integer.toString(0));
 
-        upperHubTeleopScoredCounter = 0;
-        upperHubTeleopMissedCounter = 0;
+        TeleopUpperConeCounter = 0;
+        TeleopUpperCubeCounter = 0;
 
-        lowerHubTeleopScoredCounter = 0;
-        lowerHubTeleopMissedCounter = 0;
+        TeleopMiddleConeCounter = 0;
+        TeleopMiddleCubeCounter = 0;
+
+        TeleopHybridConeCounter = 0;
+        TeleopHybridCubeCounter = 0;
 
     }
 

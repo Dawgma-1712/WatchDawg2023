@@ -108,9 +108,7 @@ public class save extends Fragment implements View.OnClickListener{
                         MainActivity.matchNumber = MainActivity.matchNumText.getText().toString();
                     }
 
-                    if (Teleop.defendedByNum.getText().toString() != null){
-                        MainActivity.defendedOnByNumber = Teleop.defendedByNum.getText().toString();
-                    }
+
 
                     if (MainActivity.scoutNameText.getText().toString() != null){
                         MainActivity.scoutName = MainActivity.scoutNameText.getText().toString();
@@ -128,7 +126,7 @@ public class save extends Fragment implements View.OnClickListener{
 
                 data = MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
                         /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + "," + MainActivity.AutoHybridCone + "," + MainActivity.AutoHybridCube + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + ","
+                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + ","+ MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopUpperCone + "," + MainActivity.TeleopUpperCube + "," + MainActivity.TeleopHybridCone + "," + MainActivity.TeleopHybridCube + ","
                         /* Climb */  + MainActivity.AutoDocked + "," + MainActivity.AutoEngaged + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
                         /* AddInfo*/ + MainActivity.noClimbAttempt + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
@@ -174,9 +172,7 @@ public class save extends Fragment implements View.OnClickListener{
                         MainActivity.matchNumber = MainActivity.matchNumText.getText().toString();
                     }
 
-                    if (Teleop.defendedByNum.getText().toString() != null){
-                        MainActivity.defendedOnByNumber = Teleop.defendedByNum.getText().toString();
-                    }
+
 
 
                 }
@@ -191,7 +187,7 @@ public class save extends Fragment implements View.OnClickListener{
 
                 data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
                         /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + ","
+                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopUpperCone + "," + MainActivity.TeleopUpperCube + ","
                         /* Climb */  + MainActivity.AutoDocked + "," + MainActivity.AutoEngaged + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
                         /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 

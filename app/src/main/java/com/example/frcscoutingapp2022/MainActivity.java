@@ -61,10 +61,12 @@ public class MainActivity extends AppCompatActivity {
     public static int AutoHybridCone = 0;
     public static int AutoHybridCube = 0;
 
-    public static int upperScoredTeleop = 0;
-    public static int upperMissedTeleop = 0;
-    public static int lowerScoredTeleop = 0;
-    public static int lowerMissedTeleop = 0;
+    public static int TeleopUpperCone = 0;
+    public static int TeleopUpperCube = 0;
+    public static int TeleopMiddleCone = 0;
+    public static int TeleopMiddleCube = 0;
+    public static int TeleopHybridCone = 0;
+    public static int TeleopHybridCube = 0;
 
 
     @Override
@@ -114,10 +116,10 @@ public class MainActivity extends AppCompatActivity {
         AutoHybridCone = 0;
         AutoHybridCube = 0;
 
-        upperScoredTeleop = 0;
-        upperMissedTeleop = 0;
-        lowerScoredTeleop = 0;
-        lowerMissedTeleop = 0;
+        TeleopUpperCone = 0;
+        TeleopUpperCube = 0;
+        TeleopMiddleCone = 0;
+        TeleopMiddleCube = 0;
 
 
     }
@@ -137,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.playedDefense = checked ? 1 : 0;
 
                 break;
-            case R.id.defendedOnCheckBox:
+            case R.id.GotDefendedCheckBox:
                 //MainActivity.checkBoxData[3] = checked ? 1 : 0;
                 MainActivity.defendedOn = checked ? 1 : 0;
 
