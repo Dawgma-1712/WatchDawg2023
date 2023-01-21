@@ -1,6 +1,5 @@
 package com.example.frcscoutingapp2022;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -12,8 +11,6 @@ import android.os.ParcelFileDescriptor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.zxing.BarcodeFormat;
@@ -56,27 +53,27 @@ public class save extends Fragment implements View.OnClickListener{
     }
 
 
-        public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
-        super.onActivityResult(requestCode, resultCode, resultData);
-        if (requestCode == CREATE_FILE && resultCode == Activity.RESULT_OK) {
-            Uri uri = null;
-            if (resultData != null) {
-                uri = resultData.getData();
-                fileUri = uri;
-
-                // Good luck reading :)
-                String data = "";
-
-                data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-                        /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
-                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
-                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
-
-                alterDocument(uri, data);
-            }
-        }
-    }
+//        public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
+//        super.onActivityResult(requestCode, resultCode, resultData);
+//        if (requestCode == CREATE_FILE && resultCode == Activity.RESULT_OK) {
+//            Uri uri = null;
+//            if (resultData != null) {
+//                uri = resultData.getData();
+//                fileUri = uri;
+//
+//                // Good luck reading :)
+//                String data = "";
+//
+//                data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
+//                        /* Auto */   + MainActivity.taxi + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + ","
+//                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + ","
+//                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
+//                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+//
+//                alterDocument(uri, data);
+//            }
+//        }
+//    }
 
     private void alterDocument(Uri uri, String data) {
         try {
@@ -130,9 +127,9 @@ public class save extends Fragment implements View.OnClickListener{
 
 
                 data = MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-                        /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
-                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
+                        /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + "," + MainActivity.AutoHybridCone + "," + MainActivity.AutoHybridCube + ","
+                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + ","
+                        /* Climb */  + MainActivity.AutoDocked + "," + MainActivity.AutoEngaged + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
                         /* AddInfo*/ + MainActivity.noClimbAttempt + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
@@ -193,9 +190,9 @@ public class save extends Fragment implements View.OnClickListener{
                 System.out.println(MainActivity.defendedOnByNumber);
 
                 data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-                        /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
-                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
-                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
+                        /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + ","
+                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + ","
+                        /* Climb */  + MainActivity.AutoDocked + "," + MainActivity.AutoEngaged + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
                         /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 

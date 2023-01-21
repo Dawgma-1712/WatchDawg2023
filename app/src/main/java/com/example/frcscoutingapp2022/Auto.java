@@ -15,23 +15,29 @@ public class Auto extends Fragment implements View.OnClickListener {
 
     //initialize variables
 
-    //Initialize upper hub text views
-    private TextView upperAutoScored;
-    private TextView upperAutoMissed;
+    //Initialize upper node text views
+    private TextView AutoUpperConeText;
+    private TextView AutoUpperCubeText;
 
-    //initialize lower hub text views
-    private TextView lowerAutoMissed;
-    private TextView lowerAutoScored;
+    //initialize Middle node text views
+    private TextView AutoMiddleConeText;
+    private TextView AutoMiddleCubeText;
 
-    int i;
+    //initialize Hybrid node text views
+    private TextView AutoHybridConeText;
+    private TextView AutoHybridCubeText;
 
 
 
     //counter variables
-    private int upperAutoScoredCounter = 0;
-    private int upperAutoMissedCounter = 0;
-    private int lowerAutoScoredCounter = 0;
-    private int lowerAutoMissedCounter = 0;
+    private int AutoUpperConeCounter = 0;
+    private int AutoUpperCubeCounter = 0;
+
+    private int AutoMiddleConeCounter = 0;
+    private int AutoMiddleCubeCounter = 0;
+
+    private int AutoHybridConeCounter = 0;
+    private int AutoHybridCubeCounter = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,28 +48,37 @@ public class Auto extends Fragment implements View.OnClickListener {
 
 
         //Define TextViews
-        upperAutoScored = (TextView) view.findViewById(R.id.upperHubAutoScored);
-        upperAutoMissed = (TextView) view.findViewById(R.id.upperHubAutoMissed);
+        AutoUpperConeText = (TextView) view.findViewById(R.id.AutoUpperConeCounter);
+        AutoUpperCubeText = (TextView) view.findViewById(R.id.AutoUpperCubeCounter);
 
-        lowerAutoScored = (TextView) view.findViewById(R.id.lowerHubAutoScored);
-        lowerAutoMissed = (TextView) view.findViewById(R.id.lowerHubAutoMissed);
+        AutoMiddleConeText = (TextView) view.findViewById(R.id.AutoMiddleConeCounter);
+        AutoMiddleCubeText = (TextView) view.findViewById(R.id.AutoMiddleCubeCounter);
+
+        AutoHybridConeText = (TextView) view.findViewById(R.id.AutoHybridConeCounter);
+        AutoHybridCubeText = (TextView) view.findViewById(R.id.AutoHybridCubeCounter);
 
 
 
+        //Upper Row Buttons
+        view.findViewById(R.id.AutoUpperConeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoUpperConeDecrease).setOnClickListener(this);
 
-        //inner buttons
-        view.findViewById(R.id.upperHubAutoScoredIncrease).setOnClickListener(this);
-        view.findViewById(R.id.upperHubAutoScoredDecrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoUpperCubeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoUpperCubeDecrease).setOnClickListener(this);
 
-        view.findViewById(R.id.upperHubAutoMissedIncrease).setOnClickListener(this);
-        view.findViewById(R.id.upperHubAutoMissedDecrease).setOnClickListener(this);
+        //Middle Row Buttons
+        view.findViewById(R.id.AutoMiddleConeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoMiddleConeDecrease).setOnClickListener(this);
 
-        //outer port buttons
-        view.findViewById(R.id.lowerHubAutoScoredIncrease).setOnClickListener(this);
-        view.findViewById(R.id.lowerHubAutoScoredDecrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoMiddleCubeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoMiddleCubeDecrease).setOnClickListener(this);
 
-        view.findViewById(R.id.lowerHubAutoMissedIncrease).setOnClickListener(this);
-        view.findViewById(R.id.lowerHubAutoMissedDecrease).setOnClickListener(this);
+        //Hybrid Row Buttons
+        view.findViewById(R.id.AutoHybridConeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoHybridConeDecrease).setOnClickListener(this);
+
+        view.findViewById(R.id.AutoHybridCubeIncrease).setOnClickListener(this);
+        view.findViewById(R.id.AutoHybridCubeDecrease).setOnClickListener(this);
 
 
         return view;
@@ -72,66 +87,96 @@ public class Auto extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-            case R.id.upperHubAutoScoredIncrease:
-                upperAutoScoredCounter++;
-                upperAutoScored.setText(Integer.toString(upperAutoScoredCounter));
+            case R.id.AutoUpperConeIncrease:
+                AutoUpperConeCounter++;
+                AutoUpperConeText.setText(Integer.toString(AutoUpperConeCounter));
                 //MainActivity.editMatchData(0, 0, MainActivity.getButtonData()[0][0] + 1);
-                MainActivity.upperScoredAuto++;
+                MainActivity.AutoUpperCone++;
                 break;
 
-            case R.id.upperHubAutoScoredDecrease:
-                if(upperAutoScoredCounter > 0) {
-                    upperAutoScoredCounter--;
-                    upperAutoScored.setText(Integer.toString(upperAutoScoredCounter));
+            case R.id.AutoUpperConeDecrease:
+                if(AutoUpperConeCounter > 0) {
+                    AutoUpperConeCounter--;
+                    AutoUpperConeText.setText(Integer.toString(AutoUpperConeCounter));
                     //MainActivity.editMatchData(0, 0, MainActivity.getButtonData()[0][0] - 1);
-                    MainActivity.upperScoredAuto--;
+                    MainActivity.AutoUpperCone--;
                 } break;
 
-            case R.id.upperHubAutoMissedIncrease:
-                upperAutoMissedCounter++;
-                upperAutoMissed.setText(Integer.toString(upperAutoMissedCounter));
+            case R.id.AutoUpperCubeIncrease:
+                AutoUpperCubeCounter++;
+                AutoUpperCubeText.setText(Integer.toString(AutoUpperCubeCounter));
                 //MainActivity.editMatchData(0, 1, MainActivity.getButtonData()[0][1] + 1);\
-                MainActivity.upperMissedAuto++;
+                MainActivity.AutoUpperCube++;
 
                 break;
 
-            case R.id.upperHubAutoMissedDecrease:
-                if(upperAutoMissedCounter > 0) {
-                    upperAutoMissedCounter--;
-                    upperAutoMissed.setText(Integer.toString(upperAutoMissedCounter));
+            case R.id.AutoUpperCubeDecrease:
+                if(AutoUpperCubeCounter > 0) {
+                    AutoUpperCubeCounter--;
+                    AutoUpperCubeText.setText(Integer.toString(AutoUpperCubeCounter));
                     //MainActivity.editMatchData(0, 1, MainActivity.getButtonData()[0][1] - 1);
-                    MainActivity.upperMissedAuto--;
+                    MainActivity.AutoUpperCube--;
                 } break;
 
-            case R.id.lowerHubAutoScoredIncrease:
-                lowerAutoScoredCounter++;
-                lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
+            case R.id.AutoMiddleConeIncrease:
+                AutoMiddleConeCounter++;
+                AutoMiddleConeText.setText(Integer.toString(AutoMiddleConeCounter));
                 //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] + 1);
-                MainActivity.lowerScoredAuto++;
+                MainActivity.AutoMiddleCone++;
 
                 break;
 
-            case R.id.lowerHubAutoScoredDecrease:
-                if(lowerAutoScoredCounter > 0) {
-                    lowerAutoScoredCounter--;
-                    lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
+            case R.id.AutoMiddleConeDecrease:
+                if(AutoMiddleConeCounter > 0) {
+                    AutoMiddleConeCounter--;
+                    AutoMiddleConeText.setText(Integer.toString(AutoMiddleConeCounter));
                     //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] - 1);
-                    MainActivity.lowerScoredAuto--;
+                    MainActivity.AutoMiddleCone--;
                 } break;
 
-            case R.id.lowerHubAutoMissedIncrease:
-                lowerAutoMissedCounter++;
-                lowerAutoMissed.setText(Integer.toString(lowerAutoMissedCounter));
+            case R.id.AutoMiddleCubeIncrease:
+                AutoMiddleCubeCounter++;
+                AutoMiddleCubeText.setText(Integer.toString(AutoMiddleCubeCounter));
                 //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] + 1);
-                MainActivity.lowerMissedAuto++;
+                MainActivity.AutoMiddleCube++;
                 break;
 
-            case R.id.lowerHubAutoMissedDecrease:
-                if(lowerAutoMissedCounter > 0) {
-                    lowerAutoMissedCounter--;
-                    lowerAutoMissed.setText(Integer.toString(lowerAutoMissedCounter));
+            case R.id.AutoMiddleCubeDecrease:
+                if(AutoMiddleCubeCounter > 0) {
+                    AutoMiddleCubeCounter--;
+                    AutoMiddleCubeText.setText(Integer.toString(AutoMiddleCubeCounter));
                     //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] - 1);
-                    MainActivity.lowerMissedAuto--;
+                    MainActivity.AutoMiddleCube--;
+                } break;
+            case R.id.AutoHybridConeIncrease:
+                AutoHybridConeCounter++;
+                AutoHybridConeText.setText(Integer.toString(AutoHybridConeCounter));
+                //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] + 1);
+                MainActivity.AutoHybridCone++;
+
+                break;
+
+            case R.id.AutoHybridConeDecrease:
+                if(AutoHybridConeCounter > 0) {
+                    AutoHybridConeCounter--;
+                    AutoHybridConeText.setText(Integer.toString(AutoHybridConeCounter));
+                    //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] - 1);
+                    MainActivity.AutoHybridCone--;
+                } break;
+
+            case R.id.AutoHybridCubeIncrease:
+                AutoHybridCubeCounter++;
+                AutoHybridCubeText.setText(Integer.toString(AutoHybridCubeCounter));
+                //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] + 1);
+                MainActivity.AutoHybridCube++;
+                break;
+
+            case R.id.AutoHybridCubeDecrease:
+                if(AutoHybridCubeCounter > 0) {
+                    AutoHybridCubeCounter--;
+                    AutoHybridCubeText.setText(Integer.toString(AutoHybridCubeCounter));
+                    //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] - 1);
+                    MainActivity.AutoHybridCube--;
                 } break;
         }
     }
@@ -139,10 +184,14 @@ public class Auto extends Fragment implements View.OnClickListener {
     public void onResume() {
         super.onResume();
 
-        upperAutoScored.setText(Integer.toString(upperAutoScoredCounter));
-        upperAutoMissed.setText(Integer.toString(upperAutoMissedCounter));
-        lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
-        lowerAutoMissed.setText(Integer.toString(lowerAutoMissedCounter));
+        AutoUpperConeText.setText(Integer.toString(AutoUpperConeCounter));
+        AutoUpperCubeText.setText(Integer.toString(AutoUpperCubeCounter));
+
+        AutoMiddleConeText.setText(Integer.toString(AutoMiddleConeCounter));
+        AutoMiddleCubeText.setText(Integer.toString(AutoMiddleCubeCounter));
+
+        AutoHybridConeText.setText(Integer.toString(AutoHybridConeCounter));
+        AutoHybridCubeText.setText(Integer.toString(AutoHybridCubeCounter));
 
     }
 }

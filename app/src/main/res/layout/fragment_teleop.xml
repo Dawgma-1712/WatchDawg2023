@@ -178,7 +178,7 @@
         app:layout_constraintVertical_bias="0.462" />
 
     <TextView
-        android:id="@+id/lowerAutoScoredLabel"
+        android:id="@+id/AutoMiddleConeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scored"
@@ -315,7 +315,7 @@
         app:layout_constraintVertical_bias="0.582" />
 
     <TextView
-        android:id="@+id/upperAutoScoredLabel"
+        android:id="@+id/AutoUpperConeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scored"
@@ -328,7 +328,7 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <TextView
-        android:id="@+id/upperAutoMissedLabel"
+        android:id="@+id/AutoUpperCubeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Missed"
@@ -338,95 +338,13 @@
         app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.379" /><![CDATA[
 
-    <CheckBox
-        android:id="@+id/fenderCheckBox"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
 
-        android:onClick="onCheckBoxClicked"
-        android:text="Fender"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.299"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
 
-    <TextView
-        android:id="@+id/shotFromTextView"
-        android:layout_width="135dp"
-        android:layout_height="29dp"
-        android:text="Shot From"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
 
-    <CheckBox
-        android:id="@+id/tarmacCheckBox"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
 
-        android:button="@null"
 
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:onClick="onCheckBoxClicked"
-        android:text="Tarmac"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.667"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
-
-    <CheckBox
-        android:id="@+id/generalLocationCheckBox"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-
-        android:onClick="onCheckBoxClicked"
-        android:text="General"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.667"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944" />
-
-    <CheckBox
-        android:id="@+id/LaunchpadCheckBox"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:button="@null"
-
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-
-        android:text="Launchpad"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.302"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944" /><![CDATA[
 
 
 
@@ -443,6 +361,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.72" />
+
 
 
 

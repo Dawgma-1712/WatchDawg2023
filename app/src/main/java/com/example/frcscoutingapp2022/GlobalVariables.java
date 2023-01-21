@@ -3,7 +3,7 @@ package com.example.frcscoutingapp2022;
 
 import android.app.Application;
 
-//created by michael aizenberg
+//created by
 public class GlobalVariables extends Application {
 
     private static String teamNum;

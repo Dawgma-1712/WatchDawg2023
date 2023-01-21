@@ -1,33 +1,18 @@
 package com.example.frcscoutingapp2022;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.ParcelFileDescriptor;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,18 +37,13 @@ public class MainActivity extends AppCompatActivity {
     public static String defendedOnByNumber = "";
 
 
-    public static int taxi = 0;
+    public static int mobility = 0;
     public static int alliance = 0;
     public static int playedDefense = 0;
     public static int defendedOn = 0;
 
-    public static int fender = 0;
-    public static int tarmac = 0;
-    public static int launchPad = 0;
-    public static int genLoc = 0;
-
-    public static int lowFail = 0;
-    public static int lowSuccess = 0;
+    public static int AutoDocked = 0;
+    public static int AutoEngaged = 0;
     public static int midFail = 0;
     public static int midSuccess = 0;
     public static int highFail = 0;
@@ -74,10 +54,12 @@ public class MainActivity extends AppCompatActivity {
     public static int deadBot = 0;
     public static int noClimbAttempt = 0;
 
-    public static int upperScoredAuto = 0;
-    public static int upperMissedAuto = 0;
-    public static int lowerScoredAuto = 0;
-    public static int lowerMissedAuto = 0;
+    public static int AutoUpperCone = 0;
+    public static int AutoUpperCube = 0;
+    public static int AutoMiddleCone = 0;
+    public static int AutoMiddleCube = 0;
+    public static int AutoHybridCone = 0;
+    public static int AutoHybridCube = 0;
 
     public static int upperScoredTeleop = 0;
     public static int upperMissedTeleop = 0;
@@ -108,17 +90,13 @@ public class MainActivity extends AppCompatActivity {
         matchNumText = (EditText) findViewById(R.id.matchNum);
         scoutNameText = (EditText) findViewById(R.id.name);
 
-        taxi = 0;
+        mobility = 0;
         playedDefense = 0;
         defendedOn = 0;
 
-        fender = 0;
-        tarmac = 0;
-        launchPad = 0;
-        genLoc = 0;
 
-        lowFail = 0;
-        lowSuccess = 0;
+        AutoDocked = 0;
+        AutoEngaged = 0;
         midFail = 0;
         midSuccess = 0;
         highFail = 0;
@@ -129,10 +107,12 @@ public class MainActivity extends AppCompatActivity {
         deadBot = 0;
         noClimbAttempt = 0;
 
-        upperScoredAuto = 0;
-        upperMissedAuto = 0;
-        lowerScoredAuto = 0;
-        lowerMissedAuto = 0;
+        AutoUpperCone = 0;
+        AutoUpperCube = 0;
+        AutoMiddleCone = 0;
+        AutoMiddleCube = 0;
+        AutoHybridCone = 0;
+        AutoHybridCube = 0;
 
         upperScoredTeleop = 0;
         upperMissedTeleop = 0;
@@ -162,39 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.defendedOn = checked ? 1 : 0;
 
                 break;
-            case R.id.fenderCheckBox:
-                //MainActivity.checkBoxData[4] = checked ? 1 : 0;
-                MainActivity.fender = checked ? 1 : 0;
 
-                break;
-            case R.id.tarmacCheckBox:
-                //MainActivity.checkBoxData[5] = checked ? 1 : 0;
-                MainActivity.tarmac = checked ? 1 : 0;
-
-                break;
-            case R.id.LaunchpadCheckBox:
-                //MainActivity.checkBoxData[6] = checked ? 1 : 0;
-                MainActivity.launchPad = checked ? 1 : 0;
-
-                break;
-            case R.id.generalLocationCheckBox:
-                //MainActivity.checkBoxData[7] = checked ? 1 : 0;
-                MainActivity.genLoc = checked ? 1 : 0;
-
-                break;
-            case R.id.lowHangFailure:
-                //MainActivity.checkBoxData[8] = checked ? 1: 0;
-                MainActivity.lowFail = checked ? 1 : 0;
-                //MainActivity.lowSuccess = 0;
-
-                break;
-            case R.id.lowHangSuccess:
-                //MainActivity.checkBoxData[9] = checked ? 1 : 0;
-                MainActivity.lowSuccess = checked ? 1 : 0;
-                //MainActivity.lowFail = 0;
-
-
-                break;
             case R.id.midHangFailure:
                 //MainActivity.checkBoxData[10] = checked ? 1 : 0;
                 MainActivity.midFail = checked ? 1 : 0;
@@ -237,9 +185,9 @@ public class MainActivity extends AppCompatActivity {
                 //MainActivity.travFail = 0;
 
                 break;
-            case R.id.taxiCheckBox:
+            case R.id.MobilityCheckBox:
                 //MainActivity.checkBoxData[16] = checked ? 1 : 0;
-                MainActivity.taxi = checked ? 1 : 0;
+                MainActivity.mobility = checked ? 1 : 0;
 
                 break;
             case R.id.penalized:
@@ -273,6 +221,19 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.alliance = 0;
                 System.out.println(MainActivity.alliance);
                 break;
+
+
+            case R.id.AutoDocked:
+                MainActivity.AutoDocked = 1;
+                MainActivity.AutoEngaged = 0;
+                System.out.println(MainActivity.AutoDocked);
+                System.out.println(MainActivity.AutoEngaged);
+                break;
+            case R.id.AutoEngaged:
+                MainActivity.AutoEngaged = 1;
+                MainActivity.AutoDocked = 0;
+                System.out.println(MainActivity.AutoEngaged);
+                System.out.println(MainActivity.AutoDocked);
         }
 
 //
