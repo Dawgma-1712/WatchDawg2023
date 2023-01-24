@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/background2"
     tools:context=".Teleop">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,13 +16,13 @@
         android:layout_height="46dp"
         android:text="Upper"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <TableLayout
         android:id="@+id/tableLayout2"
@@ -50,8 +50,8 @@
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 android:onClick="onCheckBoxClicked"
-                android:text="played defense"
-                android:textColor="@color/black"
+                android:text="Played Defense"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.158"
@@ -75,7 +75,7 @@
                 android:minHeight="48dp"
                 android:onClick="onCheckBoxClicked"
                 android:text="Got Defended"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
 
@@ -92,9 +92,9 @@
         android:id="@+id/TeleopUpperCubeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="-"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,13 +107,13 @@
         android:id="@+id/TeleopUpperCubeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.987"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.462" />
@@ -122,24 +122,24 @@
         android:id="@+id/TeleopUpperConeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="-"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459" />
+        app:layout_constraintVertical_bias="0.458" />
 
     <Button
         android:id="@+id/TeleopUpperConeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,9 +152,9 @@
         android:id="@+id/TeleopMiddleCubeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="-"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,13 +168,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cube"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.57" />
 
     <TextView
         android:id="@+id/TeleopMiddleConeCounter"
@@ -184,68 +184,68 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <Button
         android:id="@+id/TeleopMiddleCubeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintVertical_bias="0.681" />
 
     <Button
         android:id="@+id/TeleopMiddleConeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="-"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.681" />
 
     <TextView
         android:id="@+id/TeleopMiddleConeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cone"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.577" />
 
     <Button
         android:id="@+id/TeleopMiddleConeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.681" />
 
     <TextView
         android:id="@+id/TeleopMiddleLabel"
@@ -253,34 +253,34 @@
         android:layout_height="32dp"
         android:text="Middle"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
+        app:layout_constraintVertical_bias="0.562" />
 
     <TextView
         android:id="@+id/TeleopMiddleCubeCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <Button
         android:id="@+id/TeleopHybridCubeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="-"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -293,13 +293,13 @@
         android:id="@+id/TeleopHybridConeDecrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="-"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.919" />
@@ -308,29 +308,29 @@
         android:id="@+id/TeleopHybridCubeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.987"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.919" />
 
     <TextView
         android:id="@+id/TeleopHybridCubeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="9dp"
+        android:layout_height="17dp"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.866" />
+        app:layout_constraintVertical_bias="0.872" />
 
     <TextView
         android:id="@+id/TeleopHybridLabel"
@@ -338,20 +338,20 @@
         android:layout_height="34dp"
         android:text="Hybrid"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.783" />
 
     <TextView
         android:id="@+id/TeleopHybridCubeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cube"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.791"
@@ -361,41 +361,41 @@
 
     <TextView
         android:id="@+id/TeleopHybridConeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="8dp"
+        android:layout_height="16dp"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.866" />
+        app:layout_constraintVertical_bias="0.871" />
 
     <TextView
         android:id="@+id/TeleopHybridConeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cone"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
+        app:layout_constraintVertical_bias="0.786" />
 
     <Button
         android:id="@+id/TeleopHybridConeIncrease"
         android:layout_width="91dp"
         android:layout_height="100dp"
-        android:background="@color/maroon4"
+        android:background="@drawable/round_button"
         android:text="+"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.919" />
@@ -405,36 +405,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.463" />
 
     <TextView
         android:id="@+id/TeleopUpperCubeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="12dp"
+        android:layout_height="20dp"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.463" />
+        app:layout_constraintVertical_bias="0.464" />
 
     <TextView
         android:id="@+id/TeleopUpperConeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cone"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.379" />
@@ -444,13 +444,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cube"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" /><![CDATA[
+        app:layout_constraintVertical_bias="0.38" />
 
 
 
@@ -458,27 +458,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
-
-
-
-
-
-
-
-]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

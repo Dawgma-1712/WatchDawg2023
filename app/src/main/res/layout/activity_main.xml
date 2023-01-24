@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "@color/white"
+    android:background = "@color/maroon2"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,7 +19,7 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
-        android:layout_width="597dp"
+        android:layout_width="match_parent"
         android:layout_height="865dp"
         android:layout_marginTop="3dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -35,14 +35,25 @@
         android:layout_width="603dp"
         android:layout_height="85dp"
         android:layout_marginTop="56dp"
-        android:background="@color/white"
+        android:background="@color/maroon1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintVertical_bias="0.024"
-        app:tabTextColor="@color/maroon1" />
+        app:tabTextColor="@color/white" />
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/watch_dog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
 
     <EditText
         android:id="@+id/teamNum"
@@ -50,9 +61,10 @@
         android:layout_height="46dp"
         android:hint="Team Num"
         android:inputType="number"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.016" />
@@ -65,7 +77,6 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.016" />

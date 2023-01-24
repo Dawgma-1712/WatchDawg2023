@@ -4,23 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".Teleop">
 
     <!-- TODO: Update blank fragment layout -->
 
-
-    <CheckBox
-        android:id="@+id/penalized"
-        android:layout_width="143dp"
-        android:layout_height="54dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Penalized"
+    <View
+        android:layout_width="263dp"
+        android:layout_height="233dp"
+        android:background="@drawable/round_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.195" />
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="147dp"
+        android:background="@drawable/round_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537" />
+
+    <CheckBox
+        android:id="@+id/ParkingButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckBoxClicked"
+        android:text="Parking"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <CheckBox
+        android:id="@+id/EngagedButton"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckBoxClicked"
+        android:text="Engaged"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <CheckBox
+        android:id="@+id/DockedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckBoxClicked"
+        android:text="Docked"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <CheckBox
+        android:id="@+id/penalized"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckBoxClicked"
+        android:text="Penalized"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/deadBot"
@@ -28,12 +91,13 @@
         android:layout_height="45dp"
         android:onClick="onCheckBoxClicked"
         android:text="Dead Bot"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.557" />
 
     <EditText
         android:id="@+id/additionalNotes"
@@ -45,44 +109,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.93" />
 
-    <CheckBox
-        android:id="@+id/DockedButton"
-        android:layout_width="135dp"
-        android:layout_height="53dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Docked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
-
-    <CheckBox
-        android:id="@+id/ParkingButton"
-        android:layout_width="139dp"
-        android:layout_height="46dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Parking"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
-
-    <CheckBox
-        android:id="@+id/EngagedButton"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Engaged"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
