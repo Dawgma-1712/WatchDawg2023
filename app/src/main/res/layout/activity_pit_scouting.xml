@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PitScouting">
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background1"
+        tools:context=".PitScouting">
+
+        <EditText
+            android:id="@+id/TeamNumPit"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:hint="Team Num"
+            android:inputType="number"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Weight"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="120dp"
+            android:hint="Weight"
+            android:inputType="number"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/TeamNumPit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/TeamNumPit"
+            app:layout_constraintTop_toBottomOf="@+id/TeamNumPit" />
+
+        <EditText
+            android:id="@+id/DriveMotors"
+            android:layout_width="166dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="76dp"
+            android:hint="Drive Motor Type"
+            android:inputType="text"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/Weight"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="@+id/Weight"
+            app:layout_constraintTop_toBottomOf="@+id/Weight" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/maroon1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/DriveMotors"
+            app:layout_constraintStart_toStartOf="@+id/DriveMotors"
+            app:layout_constraintTop_toBottomOf="@+id/DriveMotors" />
 
 
-    <EditText
-        android:id="@+id/teamNumPit"
-        android:layout_width="122dp"
-        android:layout_height="46dp"
-        android:hint="Team Num"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
