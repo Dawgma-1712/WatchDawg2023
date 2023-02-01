@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
@@ -16,6 +17,30 @@
         android:background="@drawable/background1"
         tools:context=".PitScouting">
 
+        <View
+            android:id="@+id/view2"
+            android:layout_width="341dp"
+            android:layout_height="412dp"
+            android:layout_marginTop="704dp"
+            android:background="@drawable/round_rectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/PitScoutingDivider1"
+            android:layout_width="550dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="564dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <EditText
             android:id="@+id/TeamNumPit"
             android:layout_width="120dp"
@@ -24,8 +49,75 @@
             android:hint="Team Num"
             android:inputType="number"
             android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/WheelType"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="548dp"
+            android:hint="Wheel Type"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/RobotWidth"
+            android:layout_width="160dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="612dp"
+            android:hint="Robot Width (in)"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/robotLength"
+            android:layout_width="160dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="612dp"
+            android:hint="Robot Length (in)"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/DriveType"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="460dp"
+            android:hint="DriveType"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/numberOfMotors"
+            android:layout_width="184dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="348dp"
+            android:hint=" Number of motors"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,10 +125,11 @@
             android:id="@+id/Weight"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="44dp"
             android:hint="Weight"
             android:inputType="number"
             android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/TeamNumPit"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/TeamNumPit"
@@ -46,27 +139,123 @@
             android:id="@+id/DriveMotors"
             android:layout_width="166dp"
             android:layout_height="55dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="56dp"
             android:hint="Drive Motor Type"
             android:inputType="text"
             android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/Weight"
-            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="@+id/Weight"
             app:layout_constraintTop_toBottomOf="@+id/Weight" />
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="88dp"
-            android:background="@drawable/round_rectangle"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/maroon1"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/DriveMotors"
-            app:layout_constraintStart_toStartOf="@+id/DriveMotors"
-            app:layout_constraintTop_toBottomOf="@+id/DriveMotors" />
+        <EditText
+            android:id="@+id/locationOfScoring"
+            android:layout_width="259dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="712dp"
+            android:hint="location of scoring"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/notesOnCupOrCone"
+            android:layout_width="261dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="780dp"
+            android:hint="Notes on cup or cone scoring"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/intakeMethod"
+            android:layout_width="259dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="848dp"
+            android:hint="Intake Method"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/abilityToDockAndEngage"
+            android:layout_width="259dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="900dp"
+            android:hint="Ability to dock and engage"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/dockingAndEngagingFeatures"
+            android:layout_width="259dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="944dp"
+            android:hint="Docking and engaging features"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/autoRoutine"
+            android:layout_width="259dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="1000dp"
+            android:hint="Notes on auto routine"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/notesOnRobot"
+            android:layout_width="259dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="1052dp"
+            android:hint="Notes on robot general"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/pitScoutingSave"
+            android:layout_width="139dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="1160dp"
+            android:text="Save"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

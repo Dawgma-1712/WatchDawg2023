@@ -127,8 +127,8 @@ public class save extends Fragment implements View.OnClickListener{
                 data = MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
                         /* Auto */   + MainActivity.mobility + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoHybridCone + "," + MainActivity.AutoUpperCube + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoHybridCube + "," + MainActivity.AutoEngaged + ","+ MainActivity.AutoDocked + ","
                         /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + ","+ MainActivity.TeleopUpperCone + "," + MainActivity.TeleopMiddleCone + "," + MainActivity.TeleopHybridCone + "," + MainActivity.TeleopUpperCube + "," + MainActivity.TeleopMiddleCube + "," + MainActivity.TeleopHybridCube + ","
-                        /* Endgame */    + MainActivity.TeleopEngaged + "," + MainActivity.TeleopDocked +","+ MainActivity.Parking + ","
-                        /* AddInfo*/ + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+                        /* Endgame */+ MainActivity.TeleopEngaged + "," + MainActivity.TeleopDocked +","+ MainActivity.Parking + ","
+                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
                 //Initialize multi format writer
