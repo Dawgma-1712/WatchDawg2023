@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -35,6 +36,8 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
     private static EditText intakeMethod;
     private static EditText autoRoutine;
     private static EditText notesOnRobot;
+
+    private static ImageView iv_output2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +61,9 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
         WheelType = (EditText) findViewById(R.id.WheelType);
         DriveType = (EditText) findViewById(R.id.DriveType);
 
+        iv_output2 = findViewById(R.id.iv_output2);
+
+
 
     }
 
@@ -67,9 +73,9 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
             case R.id.pitScoutingSave:
 
 
-                data = TeamNumPit.getText().toString() + ","+Weight.getText().toString()+","+R.id.DriveMotors+","+R.id.numberOfMotors+","+R.id.WheelType+","+R.id.DriveType+","+R.id.robotLength+","+
-                        R.id.RobotWidth+"'"+R.id.locationOfScoring+","+R.id.notesOnCupOrCone+","+R.id.abilityToDockAndEngage+","+R.id.dockingAndEngagingFeatures+","+
-                        R.id.intakeMethod+","+R.id.autoRoutine+","+R.id.notesOnRobot;
+                data = TeamNumPit.getText().toString() + ","+Weight.getText().toString()+","+DriveMotors.getText().toString()+","+numberOfMotors.getText().toString()+","+WheelType.getText().toString()+","+DriveType.getText().toString()+","+robotLength.getText().toString()+","+
+                        RobotWidth.getText().toString()+"'"+locationOfScoring.getText().toString()+","+notesOnCupOrCone.getText().toString()+","+abilityToDockAndEngage.getText().toString()+","+dockingAndEngagingFeatures.getText().toString()+","+
+                        intakeMethod.getText().toString()+","+autoRoutine.getText().toString()+","+notesOnRobot.getText().toString();
 
                 //Initialize multi format writer
                 MultiFormatWriter writer = new MultiFormatWriter();
@@ -83,6 +89,7 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
                     //set bitmap on image view
                     //saveFragment.ivOutput.setImageBitmap(bitmap);
                     MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, "QR Code during"+String.valueOf(Calendar.getInstance().getTime()), String.valueOf(R.id.teamNum));
+                    iv_output2.setImageBitmap(bitmap);
 
                 } catch(WriterException e){
                     e.printStackTrace();
