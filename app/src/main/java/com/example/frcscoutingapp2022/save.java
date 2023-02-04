@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -133,6 +135,7 @@ public class save extends Fragment implements View.OnClickListener{
 
                 //Initialize multi format writer
                 MultiFormatWriter writer = new MultiFormatWriter();
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 try {
                     //Initialize bit matrix
                     BitMatrix matrix = writer.encode(data, BarcodeFormat.QR_CODE, 600, 600);
@@ -145,12 +148,19 @@ public class save extends Fragment implements View.OnClickListener{
                     //set bitmap on image view
                     //saveFragment.ivOutput.setImageBitmap(bitmap);
 
+                    Bitmap localBmp = encoder.createBitmap(matrix);
+                    localBmp.compress(Bitmap.CompressFormat.PNG, 100,stream);
+                    byte[] byteArray = stream.toByteArray();
+                    stream.close();
 
-                } catch(WriterException e){
+                } catch(WriterException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 ivOutput.setImageBitmap(bitmap);
+
                 break;
             case R.id.newMatch2:
                 Intent intent = new Intent(getActivity(), HomeScreen.class);
@@ -173,8 +183,6 @@ public class save extends Fragment implements View.OnClickListener{
                     }
 
 
-
-
                 }
                 catch (Exception e){
                     System.out.println(e.getMessage());
@@ -194,6 +202,7 @@ public class save extends Fragment implements View.OnClickListener{
 
                 // Create and save file
 
+                //Intent newIntent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
                 Intent newIntent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
                 newIntent.addCategory(Intent.CATEGORY_OPENABLE);
                 newIntent.setType("application/csv");

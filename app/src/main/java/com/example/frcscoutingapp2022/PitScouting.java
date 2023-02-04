@@ -1,13 +1,24 @@
 package com.example.frcscoutingapp2022;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -15,6 +26,9 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
 
 public class PitScouting extends AppCompatActivity implements View.OnClickListener {
@@ -42,6 +56,8 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pit_scouting);
+
+
 
         findViewById(R.id.pitScoutingSave).setOnClickListener(this);
 
@@ -80,16 +96,21 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
                 //Initialize multi format writer
                 MultiFormatWriter writer = new MultiFormatWriter();
                 try {
-                    //Initialize bit matrix
                     BitMatrix matrix = writer.encode(data, BarcodeFormat.QR_CODE, 600, 600);
-                    //Initialize barcode Encoder
                     BarcodeEncoder encoder = new BarcodeEncoder();
-                    //initialize bitmap
                     bitmap = encoder.createBitmap(matrix);
-                    //set bitmap on image view
-                    //saveFragment.ivOutput.setImageBitmap(bitmap);
-                    MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, "QR Code during"+String.valueOf(Calendar.getInstance().getTime()), String.valueOf(R.id.teamNum));
                     iv_output2.setImageBitmap(bitmap);
+
+                    if (Build.VERSION.SDK_INT >= 23) {
+                        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_GRANTED){
+                            saveImage(bitmap, TeamNumPit.getText().toString() + "pit_scouting.png");
+                        }
+                        else {
+                            ActivityCompat.requestPermissions(PitScouting.this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                        }
+                    }
+
 
                 } catch(WriterException e){
                     e.printStackTrace();
@@ -98,5 +119,30 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
                 break;
 
         }
+    }
+
+    private void saveImage(Bitmap bitmap, String name) {
+        File mypath = new File("/storage/emulated/0/Download",name);
+
+        FileOutputStream fos = null;
+        try{
+            fos = new FileOutputStream(mypath);
+            bitmap.compress (Bitmap.CompressFormat.PNG, 100, fos);
+            Toast.makeText(PitScouting.this, "QR Code saved", Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e){
+            Toast.makeText(PitScouting.this, "Error saving QR Code to gallery", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                fos.flush();
+                fos.close();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
     }
 }
