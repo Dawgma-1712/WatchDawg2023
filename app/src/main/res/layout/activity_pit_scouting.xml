@@ -17,6 +17,20 @@
         android:background="@drawable/background1"
         tools:context=".PitScouting">
 
+        <Button
+            android:id="@+id/newActivityPitScouting"
+            android:layout_width="138dp"
+            android:layout_height="83dp"
+            android:background="@color/white"
+            android:text="New Team"
+            android:textColor="@color/maroon1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.724" />
+
         <ImageView
             android:id="@+id/iv_output2"
             android:layout_width="400dp"
@@ -260,11 +274,11 @@
             android:id="@+id/pitScoutingSave"
             android:layout_width="139dp"
             android:layout_height="84dp"
-            android:layout_marginTop="1160dp"
-            android:text="Save"
+            android:layout_marginTop="1176dp"
             android:background="@color/white"
+            android:text="Save"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintHorizontal_bias="0.306"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

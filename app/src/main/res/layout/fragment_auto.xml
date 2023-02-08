@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AutoUpperCubeIncrease" />
 
+
     <View
         android:id="@+id/divider"
         android:layout_width="550dp"
@@ -51,6 +52,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="16dp"
             android:textColor="@color/white"
+            android:textSize="18dp"
             android:layout_weight="1"
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
@@ -61,6 +63,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:textSize="15dp"
             android:textColor="@color/white"
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
@@ -103,6 +106,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.776"
@@ -112,11 +116,12 @@
 
     <TextView
         android:id="@+id/AutoHybridConeLabel"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="94dp"
+        android:layout_height="38dp"
         android:gravity="center"
         android:text="Cone"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.19"
@@ -160,6 +165,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.22"
@@ -169,11 +175,12 @@
 
     <TextView
         android:id="@+id/AutoHybridCubeLabel"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
         android:gravity="center"
         android:text="Cube"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -183,12 +190,13 @@
 
     <TextView
         android:id="@+id/AutoHybridLabel"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="109dp"
+        android:layout_height="38dp"
         android:gravity="center"
         android:text="Hybrid"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -247,6 +255,7 @@
         android:layout_height="30dp"
         android:gravity="center"
         android:text="0"
+        android:textSize="20dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -257,11 +266,12 @@
 
     <TextView
         android:id="@+id/TeleopUpperConeLabel"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:text="Cone"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.19"
@@ -286,10 +296,11 @@
 
     <TextView
         android:id="@+id/TeleopUpperCubeLabel"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:text="Cube"
+        android:textSize="30dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -316,6 +327,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="30dp"
         android:text="Upper"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
@@ -324,6 +336,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.379" />
+
+    <TextView
+        android:id="@+id/autoUpperLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Alliance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
 
     <Button
         android:id="@+id/AutoMiddleCubeIncrease"
@@ -342,12 +370,13 @@
 
     <TextView
         android:id="@+id/AutoMiddleLabel"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="99dp"
+        android:layout_height="44dp"
         android:gravity="center"
         android:text="Middle"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -376,6 +405,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.776"
@@ -385,11 +415,12 @@
 
     <TextView
         android:id="@+id/TeleopMiddleConeLabel"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="79dp"
+        android:layout_height="37dp"
         android:gravity="center"
         android:text="Cone"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.19"
@@ -418,6 +449,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.22"
@@ -427,11 +459,12 @@
 
     <TextView
         android:id="@+id/AutoMiddelCubeLabel"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="82dp"
+        android:layout_height="37dp"
         android:gravity="center"
         android:text="Cube"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -456,8 +489,8 @@
 
     <CheckBox
         android:id="@+id/MobilityCheckBox"
-        android:layout_width="133dp"
-        android:layout_height="48dp"
+        android:layout_width="217dp"
+        android:layout_height="47dp"
         android:button="@null"
         android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:gravity="center"
@@ -466,6 +499,7 @@
         android:onClick="onCheckBoxClicked"
         android:text="Mobility"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
@@ -490,6 +524,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="16dp"
             android:textColor="@color/white"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
@@ -501,6 +536,7 @@
             android:layout_height="50dp"
             android:textColor="@color/white"
             android:layout_weight="1"
+            android:textSize="20dp"
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
             android:text="Red" />

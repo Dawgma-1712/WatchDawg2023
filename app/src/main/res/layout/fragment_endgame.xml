@@ -10,6 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <View
+        android:id="@+id/view"
         android:layout_width="263dp"
         android:layout_height="233dp"
         android:background="@drawable/round_rectangle"
@@ -31,46 +32,57 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.537" />
 
-    <CheckBox
-        android:id="@+id/ParkingButton"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:onClick="onCheckBoxClicked"
-        android:text="Parking"
-        android:textSize="30dp"
+    <RadioGroup
+        android:layout_width="256dp"
+        android:layout_height="233dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.227">
 
-    <CheckBox
-        android:id="@+id/EngagedButton"
-        android:layout_width="157dp"
-        android:layout_height="wrap_content"
-        android:onClick="onCheckBoxClicked"
-        android:text="Engaged"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+        <RadioButton
+            android:id="@+id/ParkingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="Parking"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.203" />
 
-    <CheckBox
-        android:id="@+id/DockedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onCheckBoxClicked"
-        android:text="Docked"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258" />
+        <RadioButton
+            android:id="@+id/EngagedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="Engaged"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.315" />
+
+        <RadioButton
+            android:id="@+id/DockedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="Docked"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258" />
+    </RadioGroup>
 
     <CheckBox
         android:id="@+id/penalized"
@@ -101,13 +113,15 @@
 
     <EditText
         android:id="@+id/additionalNotes"
-        android:layout_width="440dp"
-        android:layout_height="195dp"
+        android:layout_width="486dp"
+        android:layout_height="129dp"
+        android:hint="Opptional Notes"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintVertical_bias="0.826" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"

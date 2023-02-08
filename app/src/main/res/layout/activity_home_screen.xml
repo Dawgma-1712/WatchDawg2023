@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background1"
     tools:context=".HomeScreen">
 
     <Button
         android:id="@+id/startMatch"
-        android:layout_width="150dp"
-        android:layout_height="47dp"
-        android:background="@color/maroon4"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
         android:text="Start Match"
-        android:textColor="@color/white"
+        android:textColor="@color/maroon1"
+        android:textSize = "30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -22,11 +24,12 @@
 
     <Button
         android:id="@+id/pitScouting"
-        android:layout_width="150dp"
-        android:layout_height="47dp"
-        android:background="@color/maroon4"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
         android:text="Pit Scouting"
-        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textColor="@color/maroon1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

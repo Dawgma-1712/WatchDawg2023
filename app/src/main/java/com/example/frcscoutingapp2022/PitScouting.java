@@ -4,17 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -29,7 +23,6 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Calendar;
 
 public class PitScouting extends AppCompatActivity implements View.OnClickListener {
     private String data = "";
@@ -60,6 +53,7 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
 
 
         findViewById(R.id.pitScoutingSave).setOnClickListener(this);
+        findViewById(R.id.newActivityPitScouting).setOnClickListener(this);
 
         TeamNumPit = (EditText) findViewById(R.id.TeamNumPit);
         Weight = (EditText) findViewById(R.id.Weight);
@@ -116,6 +110,9 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
                     e.printStackTrace();
                 }
 
+                break;
+            case R.id.newActivityPitScouting:
+                startActivity(new Intent(this, HomeScreen.class));
                 break;
 
         }
