@@ -138,29 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
 
-            case R.id.EngagedButton:
-                //MainActivity.checkBoxData[11] = checked ? 1 : 0;
-                MainActivity.Parking = checked ? 1 : 0;
 
-                //MainActivity.midFail = 0;
-
-                break;
-
-            case R.id.DockedButton:
-                //MainActivity.checkBoxData[13] = checked ? 1 : 0;
-                MainActivity.TeleopDocked = checked ? 1 : 0;
-                //view.findViewById(R.id.highHangFailure).setSelected(false);
-                //MainActivity.highFail = 0;
-
-                break;
-
-            case R.id.ParkingButton:
-                //MainActivity.checkBoxData[15] = checked ? 1 : 0;
-                MainActivity.TeleopEngaged = checked ? 1 : 0;
-                //view.findViewById(R.id.traversalHangFailure).setSelected(false);
-                //MainActivity.travFail = 0;
-
-                break;
             case R.id.MobilityCheckBox:
                 //MainActivity.checkBoxData[16] = checked ? 1 : 0;
                 MainActivity.mobility = checked ? 1 : 0;
@@ -208,6 +186,36 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.AutoDocked = 0;
                 System.out.println(MainActivity.AutoEngaged);
                 System.out.println(MainActivity.AutoDocked);
+                break;
+            case R.id.EngagedButton:
+                MainActivity.TeleopEngaged =1;
+                MainActivity.TeleopDocked =0;
+                MainActivity.Parking =0;
+                System.out.println(MainActivity.TeleopEngaged);
+                System.out.println(MainActivity.TeleopDocked);
+                System.out.println(MainActivity.Parking);
+
+                break;
+
+            case R.id.DockedButton:
+                MainActivity.TeleopEngaged =0;
+                MainActivity.TeleopDocked =1;
+                MainActivity.Parking =0;
+                System.out.println(MainActivity.TeleopEngaged);
+                System.out.println(MainActivity.TeleopDocked);
+                System.out.println(MainActivity.Parking);
+
+                break;
+
+            case R.id.ParkingButton:
+                MainActivity.TeleopEngaged =0;
+                MainActivity.TeleopDocked =0;
+                MainActivity.Parking =1;
+                System.out.println(MainActivity.TeleopEngaged);
+                System.out.println(MainActivity.TeleopDocked);
+                System.out.println(MainActivity.Parking);
+
+                break;
         }
 
 //

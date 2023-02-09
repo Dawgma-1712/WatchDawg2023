@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,6 +67,7 @@ public class endgame extends Fragment {
         additionalNotesText = view.findViewById(R.id.additionalNotes);
 
         return view;
+
 
     }
 }
