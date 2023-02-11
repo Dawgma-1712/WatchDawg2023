@@ -115,7 +115,7 @@
         android:id="@+id/additionalNotes"
         android:layout_width="486dp"
         android:layout_height="129dp"
-        android:hint="Opptional Notes"
+        android:hint="Optional Notes"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
