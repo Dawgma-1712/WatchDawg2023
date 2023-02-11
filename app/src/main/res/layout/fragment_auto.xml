@@ -251,8 +251,8 @@
 
     <TextView
         android:id="@+id/AutoUpperConeCounter"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="0"
         android:textSize="20dp"
@@ -315,6 +315,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.776"
