@@ -73,3 +73,5 @@ You should have the required systems (found below, or [here](https://github.com/
 
 [Spreadsheet](./2023Mk1.8empty.xlsm)
 
+[Match Strategy Sheet](https://docs.google.com/document/d/1MbJxzmmZyDQBnunGYa1kg83b3NqzOpte/edit?usp=sharing&ouid=113372425683476679602&rtpof=true&sd=true) (Download as Microsoft Word Doc)
+
