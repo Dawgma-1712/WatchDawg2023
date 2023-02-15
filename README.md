@@ -71,5 +71,5 @@ You should have the required systems (found below, or [here](https://github.com/
 # Documentation and Files
 [User manual](https://drive.google.com/file/d/1o54JGi-gihyFXh7UFRre76viZELWCKad/view?usp=sharing)
 
-[Spreadsheet](/2023Mk1.8Empty.xlsm)
+[Spreadsheet](./2023Mk1.8empty.xlsm)
 
