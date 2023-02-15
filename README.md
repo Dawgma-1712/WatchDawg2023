@@ -1,11 +1,13 @@
-# NB FOR DRAFT:MOST LINKS LINK TO GOOGLE, IF YOU SEE THIS MESSAGE THEY PROBABLY STILL DO (ITS BIG SO IDK HOW I WOULD MISS THIS)
-
 # WatchDawg 2023
 WatchDawg is a scouting system developed by Team 1712 Dawgma designed to work in venues without cell connection. 
 
-Here's our [tutorial (links to google for now)](google.com) on how to use WatchDawg App <!--maybe split into 2 parts like our videos?-->
+Here's our [tutorial](https://www.youtube.com/watch?v=Qy0VXm0XURE) on how to use the Pit Scouting portion of the WatchDawg App <!--maybe split into 2 parts like our videos?-->
 
-And here's our [tutorial](google.com) for the excel portion of WatchDawg
+Here's our [tutorial](https://www.youtube.com/watch?v=ftOPcMmmr5I) on how to use the Match Scouting portion of the WatchDawg App
+
+And here's our ~~[tutorial (coming soon)](google.com)~~ for the excel portion of WatchDawg
+
+<!--youtube links-->
 
 # Why WatchDawg (or Features)
 
@@ -13,7 +15,7 @@ And here's our [tutorial](google.com) for the excel portion of WatchDawg
 
 The WatchDawg scouting system allows users to: <!--IDK maybe change this-->
 * Pit Scout for information on other team's robots <!--Better to use 1/2/3 or dots?-->
-* Match Scout <!-- Or maybe not use a list because we have 2 things -->
+* Match Scout <!-- Or maybe not use a list because we have 2 things --> <!--Scratch that we're good-->
 * Automatically Analyze Other Teams and Robots During Matches
 
 ## An Offline System.
@@ -46,10 +48,12 @@ Future Steps check
 You should have the required systems (found below, or [here](https://github.com/Dawgma-1712/WatchDawg2023#system-requirements)) before proceeding.
 
 1. Download the Microsoft Excel Spreadsheet found on Git/Chief Delphi. It contains macros for the automated analysis.
-2. Download the app if you haven't already (again, [here](google.com) for the git release, or [here](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1) for the Amazon Fire Store link)
-3. Download the instruction manual (found [here](google.com/stillnothingyetwe'restillwaiting))
-4. Follow the instruction manual, or our [tutorial video]()!
+2. Download the app if you haven't already (again, [here](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1) for the Amazon Fire Store link, or the Git release)
+3. Download the instruction manual (found [here](https://drive.google.com/file/d/1o54JGi-gihyFXh7UFRre76viZELWCKad/view?usp=sharing))
+4. Follow the instruction manual, or our tutorial videos, [here (for Pit Scouting)](https://www.youtube.com/watch?v=Qy0VXm0XURE), and [here (for Match Scouting)](https://www.youtube.com/watch?v=ftOPcMmmr5I)!
 <!-- Or if we use the wiki system: We have an in depth wiki for WatchDawg [here](linklinklinkyougetit)-->
+
+
 
 # Future Goals
 
@@ -62,12 +66,10 @@ You should have the required systems (found below, or [here](https://github.com/
 * Amazon Fire 7 tablets
 * A Computer with Microsoft Excel 
 * A QR code scanner
-* The app downloaded either through android studio using the [github release (again, links to google for now)](google.com) or the Amazon [Fire Store](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1)
+* The app downloaded either through android studio using the github release or the Amazon [Fire Store](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1)
 
 # Documentation and Files
-###### - User manual: [google.com/thiswillsendyoutothe404pageandisjusthereforspace]()
-###### - Spreadsheet: [google.com/sameherewewillputthecorrectlinkswhenwegetthem]()
+[User manual](https://drive.google.com/file/d/1o54JGi-gihyFXh7UFRre76viZELWCKad/view?usp=sharing)
 
-# Credit 2 Team! :)
+[Spreadsheet](/2023Mk1.8Empty.xlsm)
 
-insert credits here
