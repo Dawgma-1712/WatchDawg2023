@@ -13,24 +13,22 @@ Excel Tutorial Coming Soon
 
 ## An All in One System.
 
-The WatchDawg scouting system allows users to: <!--IDK maybe change this-->
-* Pit Scout for information on other team's robots <!--Better to use 1/2/3 or dots?-->
-* Match Scout <!-- Or maybe not use a list because we have 2 things --> <!--Scratch that we're good-->
+The WatchDawg scouting system allows users to:
+* Pit Scout for information on other team's robots
+* Match Scout
 * Automatically Analyze Other Teams and Robots During Matches
 
 ## An Offline System.
 
-The WatchDawg scouting system is entirely offline, so no worries if you forget about loading your scouting system right before a competition!
-
-In addition, no worries if you accidentally close a tab on your device -- WatchDawg will still be there when you come back.
+The WatchDawg scouting system is entirely offline!
 
 WatchDawg uses QR codes to transmit data without Wi-Fi. These QR codes can also be saved to the Amazon Fire's Photos for bulk inputs. (such as pit scouting)
 
 ## An Easy To Use System.
 
-The WatchDawg system is very intutitive, both on the App side and the Microsoft Excel side. <!-- reword obviously -->
+The WatchDawg system is very intutitive, both on the App side and the Microsoft Excel side.
 
-It is integrated with excel and provides automatic match and robot analysis when given data, and the portability of the app allows scouters to be spread out for better viewing.
+It is integrated with Microsoft Excel and provides automatic match and robot analysis when given data.
 
 <!--More stuff to note
 not a web page (not a big deal but what if oops i closed the web page)
@@ -47,7 +45,7 @@ Future Steps check
 
 You should have the required systems (found below, or [here](https://github.com/Dawgma-1712/WatchDawg2023#system-requirements)) before proceeding.
 
-1. Download the Microsoft Excel Spreadsheet found on Git. It contains macros for the automated analysis.
+1. Download the Microsoft Excel Spreadsheet found in this Github repository. You will need to add the Developer tab to the ribbon if you would like to edit any macros. 
 2. Download the app if you haven't already (again, [here](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1) for the Amazon Fire Store link, or the Git release)
 3. Download the instruction manual (found [here](https://drive.google.com/file/d/1o54JGi-gihyFXh7UFRre76viZELWCKad/view?usp=sharing))
 4. Follow the instruction manual, or our tutorial videos, [here (for Pit Scouting)](https://www.youtube.com/watch?v=Qy0VXm0XURE), and [here (for Match Scouting)](https://www.youtube.com/watch?v=ftOPcMmmr5I)!
@@ -66,10 +64,10 @@ You should have the required systems (found below, or [here](https://github.com/
 * Amazon Fire 7 tablets
 * A Computer with Microsoft Excel 
 * A QR code scanner
-* The app downloaded either through android studio using the github release or the Amazon [Fire Store](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1)
+* The app downloaded either through Android Studio using the github release or the Amazon [Fire Store](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1)
 
 # Documentation and Files
-[User manual](https://drive.google.com/file/d/1o54JGi-gihyFXh7UFRre76viZELWCKad/view?usp=sharing)
+[User manual](https://drive.google.com/file/d/1JhdpzxwV_ZGIRtdu5C_5Z7-LB50arDKs/view?usp=sharing)
 
 [Spreadsheet](./2023Mk1.8empty.xlsm)
 
