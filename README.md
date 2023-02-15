@@ -3,9 +3,9 @@
 # WatchDawg 2023
 WatchDawg is a scouting system developed by Team 1712 Dawgma designed to work in venues without cell connection. 
 
-Here's our [tutorial (links to google for now)](google.com) on how to use WatchDawg <!--maybe split into 2 parts like our videos?-->
+Here's our [tutorial (links to google for now)](google.com) on how to use WatchDawg App <!--maybe split into 2 parts like our videos?-->
 
-<!--Like so: Here's our [tutorial](google.com) for the excel portion of WatchDawg-->
+And here's our [tutorial](google.com) for the excel portion of WatchDawg
 
 # Why WatchDawg (or Features)
 
@@ -14,26 +14,28 @@ Here's our [tutorial (links to google for now)](google.com) on how to use WatchD
 The WatchDawg scouting system allows users to: <!--IDK maybe change this-->
 * Pit Scout for information on other team's robots <!--Better to use 1/2/3 or dots?-->
 * Match Scout <!-- Or maybe not use a list because we have 2 things -->
-* Automatically Analyze Other Teams and Robots During Live Matches
+* Automatically Analyze Other Teams and Robots During Matches
 
 ## An Offline System.
 
-The WatchDawg scouting system is entirely offline, so no worries if you forget about your scouting system right before a competition!
+The WatchDawg scouting system is entirely offline, so no worries if you forget about loading your scouting system right before a competition!
 
-WatchDawg 
+In addition, no worries if you accidentally close a tab on your device -- WatchDawg will still be there when you come back.
+
+WatchDawg uses QR codes to transmit data without Wi-Fi. These QR codes can also be saved to the Amazon Fire's Photos for bulk inputs (such as pit scouting)
 
 ## An Easy To Use System.
 
-The watchdawg system is very intutitive <!-- reword obviously -->
-Integrated with excel and provides automatic match and robot analysis
-Portability of the app allows scouters to be spread out for better viewing
+The WatchDawg system is very intutitive, both on the App side and the Microsoft Excel side. <!-- reword obviously -->
+
+It is integrated with excel and provides automatic match and robot analysis when given data, and the portability of the app allows scouters to be spread out for better viewing
 
 <!--More stuff to note
 not a web page (not a big deal but what if oops i closed the web page)
 Excel Integration and Automatic Match Analysis check
 Fully Offline check?
 Ease of use/Portability check
-App + Excel sheet
+App + Excel sheet check?
 
 Future Steps check
 
@@ -41,22 +43,26 @@ Future Steps check
 
 # Quick Start <!--Git has an internal wiki system so we could use that?-->
 
-[Here](google.com)'s the quick start guide for WatchDawg
+You should have the required systems (found below, or [here](https://github.com/Dawgma-1712/WatchDawg2023#system-requirements)) before proceeding.
 
+1. Download the Microsoft Excel Spreadsheet found on Git/Chief Delphi. It contains macros for the automated analysis.
+2. Download the app if you haven't already (again, [here](google.com) for the git release, or [here](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1) for the Amazon Fire Store link)
+3. Download the instruction manual (found [here](google.com/stillnothingyetwe'restillwaiting))
+4. Follow the instruction manual, or our [tutorial video]()!
 <!-- Or if we use the wiki system: We have an in depth wiki for WatchDawg [here](linklinklinkyougetit)-->
 
 # Future Goals
 
 - [ ] Port to other android systems, not just the Amazon Fire 7
-- [ ] Goal 2
-- [ ] Crosschecking with the Blue Alliance Database
+- [ ] Crosschecking with the TBA Database
 
 <!--Any other goals-->
 
 # System Requirements
-* Amazon Fire 7 tablets (tested, although any android device should techincally be able to run it)
-* A Computer with Excel 
-* The app downloaded either through android studio using the [github release (again, links to google for now)](google.com) or the amazon [fire store](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1)
+* Amazon Fire 7 tablets
+* A Computer with Microsoft Excel 
+* A QR code scanner
+* The app downloaded either through android studio using the [github release (again, links to google for now)](google.com) or the Amazon [Fire Store](https://www.amazon.com/Dawgma-Robotics-WatchDawg/dp/B09VMZZ6FL/ref=sr_1_1?crid=2Z8C9C9DSI7YN&keywords=watchdawg&qid=1676407384&s=mobile-apps&sprefix=watchdawg%2Cmobile-apps%2C167&sr=1-1)
 
 # Documentation and Files
 ###### - User manual: [google.com/thiswillsendyoutothe404pageandisjusthereforspace]()
