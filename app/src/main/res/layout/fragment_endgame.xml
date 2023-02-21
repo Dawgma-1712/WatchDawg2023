@@ -33,6 +33,7 @@
         app:layout_constraintVertical_bias="0.537" />
 
     <RadioGroup
+        android:id="@+id/EndgameRadioGroup"
         android:layout_width="256dp"
         android:layout_height="233dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +44,7 @@
         app:layout_constraintVertical_bias="0.227">
 
         <RadioButton
-            android:id="@+id/ParkingButton"
+            android:id="@+id/Parking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
@@ -56,7 +57,7 @@
             app:layout_constraintVertical_bias="0.203" />
 
         <RadioButton
-            android:id="@+id/EngagedButton"
+            android:id="@+id/TeleopEngaged"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
@@ -70,7 +71,7 @@
             app:layout_constraintVertical_bias="0.315" />
 
         <RadioButton
-            android:id="@+id/DockedButton"
+            android:id="@+id/TeleopDocked"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"

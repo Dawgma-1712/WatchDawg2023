@@ -61,7 +61,7 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
         robotLength = (EditText) findViewById(R.id.robotLength);
         RobotWidth = (EditText) findViewById(R.id.RobotWidth);
         locationOfScoring = (EditText) findViewById(R.id.locationOfScoring);
-        notesOnCupOrCone = (EditText) findViewById(R.id.notesOnCupOrCone);
+        notesOnCupOrCone = (EditText) findViewById(R.id.notesOnCubeOrCone);
         abilityToDockAndEngage = (EditText) findViewById(R.id.abilityToDockAndEngage);
         dockingAndEngagingFeatures = (EditText) findViewById(R.id.dockingAndEngagingFeatures);
         intakeMethod = (EditText) findViewById(R.id.intakeMethod);

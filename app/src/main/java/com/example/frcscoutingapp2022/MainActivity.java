@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -161,7 +162,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonClicked(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
+        RadioGroup EndgameRadioGroup = (RadioGroup)findViewById(R.id.EndgameRadioGroup);
+        RadioGroup AutoRadioGroup = (RadioGroup)findViewById(R.id.AutoRadioGroup);
 
         switch (view.getId()) {
             case R.id.blue:
@@ -176,47 +178,64 @@ public class MainActivity extends AppCompatActivity {
 
 
             case R.id.AutoDocked:
-                MainActivity.AutoDocked = 1;
+                if(MainActivity.AutoDocked==1) {
+                    AutoRadioGroup.clearCheck();
+                    MainActivity.AutoDocked=0;
+                }
+                else {MainActivity.AutoDocked = 1;
                 MainActivity.AutoEngaged = 0;
                 System.out.println(MainActivity.AutoDocked);
-                System.out.println(MainActivity.AutoEngaged);
+                System.out.println(MainActivity.AutoEngaged);}
                 break;
             case R.id.AutoEngaged:
-                MainActivity.AutoEngaged = 1;
+                if(MainActivity.AutoEngaged==1){
+                    AutoRadioGroup.clearCheck();
+                    MainActivity.AutoEngaged=0;}
+                else {MainActivity.AutoEngaged = 1;
                 MainActivity.AutoDocked = 0;
                 System.out.println(MainActivity.AutoEngaged);
-                System.out.println(MainActivity.AutoDocked);
+                System.out.println(MainActivity.AutoDocked);}
                 break;
-            case R.id.EngagedButton:
-                MainActivity.TeleopEngaged =1;
+            case R.id.TeleopEngaged:
+
+                if(MainActivity.TeleopEngaged==1){
+                    EndgameRadioGroup.clearCheck();
+                    MainActivity.TeleopEngaged=0;
+                }
+                else{MainActivity.TeleopEngaged =1;
                 MainActivity.TeleopDocked =0;
                 MainActivity.Parking =0;
                 System.out.println(MainActivity.TeleopEngaged);
                 System.out.println(MainActivity.TeleopDocked);
-                System.out.println(MainActivity.Parking);
-
+                System.out.println(MainActivity.Parking);}
                 break;
-
-            case R.id.DockedButton:
-                MainActivity.TeleopEngaged =0;
+            case R.id.TeleopDocked:
+                if(MainActivity.TeleopDocked==1){
+                    EndgameRadioGroup.clearCheck();
+                    MainActivity.TeleopDocked=0;
+                }
+                else{MainActivity.TeleopEngaged =0;
                 MainActivity.TeleopDocked =1;
                 MainActivity.Parking =0;
                 System.out.println(MainActivity.TeleopEngaged);
                 System.out.println(MainActivity.TeleopDocked);
-                System.out.println(MainActivity.Parking);
-
+                System.out.println(MainActivity.Parking);}
                 break;
-
-            case R.id.ParkingButton:
-                MainActivity.TeleopEngaged =0;
+            case R.id.Parking:
+                if(MainActivity.Parking==1){
+                    EndgameRadioGroup.clearCheck();
+                    MainActivity.Parking=0;
+                }
+                else{MainActivity.TeleopEngaged =0;
                 MainActivity.TeleopDocked =0;
                 MainActivity.Parking =1;
                 System.out.println(MainActivity.TeleopEngaged);
                 System.out.println(MainActivity.TeleopDocked);
-                System.out.println(MainActivity.Parking);
-
+                System.out.println(MainActivity.Parking);}
                 break;
         }
+
+        boolean checked = ((RadioButton) view).isChecked();
 
 //
 //    public void updateTeamAndMatchNum() {

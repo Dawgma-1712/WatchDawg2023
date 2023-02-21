@@ -187,11 +187,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/notesOnCupOrCone"
+            android:id="@+id/notesOnCubeOrCone"
             android:layout_width="261dp"
             android:layout_height="54dp"
             android:layout_marginTop="780dp"
-            android:hint="Notes on cup or cone scoring"
+            android:hint="Notes on cube or cone scoring"
             android:inputType="text"
             android:textColor="@color/black"
             android:textColorHint="@color/black"

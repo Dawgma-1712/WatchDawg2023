@@ -55,46 +55,6 @@ public class save extends Fragment implements View.OnClickListener{
     }
 
 
-//        public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
-//        super.onActivityResult(requestCode, resultCode, resultData);
-//        if (requestCode == CREATE_FILE && resultCode == Activity.RESULT_OK) {
-//            Uri uri = null;
-//            if (resultData != null) {
-//                uri = resultData.getData();
-//                fileUri = uri;
-//
-//                // Good luck reading :)
-//                String data = "";
-//
-//                data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-//                        /* Auto */   + MainActivity.taxi + "," + MainActivity.AutoMiddleCone + "," + MainActivity.AutoMiddleCube + "," + MainActivity.AutoUpperCone + "," + MainActivity.AutoUpperCube + ","
-//                        /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + ","
-//                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
-//                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
-//
-//                alterDocument(uri, data);
-//            }
-//        }
-//    }
-
-    private void alterDocument(Uri uri, String data) {
-        try {
-            ParcelFileDescriptor pfd = getActivity().getContentResolver().openFileDescriptor(uri, "w");
-            FileOutputStream fileOutputStream = new FileOutputStream(pfd.getFileDescriptor());
-            fileOutputStream.write((data + "\n").getBytes());
-            // Let the document provider know you're done by closing the stream.
-            fileOutputStream.close();
-            pfd.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
 
     @Override
     public void onClick(View view) {

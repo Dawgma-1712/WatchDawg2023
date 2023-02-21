@@ -35,6 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/AutoMiddleCubeIncrease" />
 
     <RadioGroup
+        android:id="@+id/AutoRadioGroup"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -51,23 +52,23 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="16dp"
-            android:textColor="@color/white"
-            android:textSize="18dp"
             android:layout_weight="1"
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
-            android:text="Docked" />
+            android:text="Docked"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
 
         <RadioButton
             android:id="@+id/AutoEngaged"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:textSize="15dp"
-            android:textColor="@color/white"
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
-            android:text="Engaged" />
+            android:text="Engaged"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
     </RadioGroup>
 
     <Button
