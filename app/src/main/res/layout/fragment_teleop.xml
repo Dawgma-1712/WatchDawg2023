@@ -14,13 +14,14 @@
         android:layout_width="550dp"
         android:layout_height="5dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="25dp"
         android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TeleopUpperCubeIncrease" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.54" />
 
     <View
         android:id="@+id/divider6"
@@ -50,76 +51,51 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.37" />
 
-    <TableLayout
-        android:id="@+id/tableLayout2"
-        android:layout_width="217dp"
-        android:layout_height="99dp"
-        android:stretchColumns="1"
+
+    <CheckBox
+        android:id="@+id/playedDefenseCheckBox"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_rectangle"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Played Defense"
+        android:textColor="@color/maroon1"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208">
+        app:layout_constraintVertical_bias="0.124" />
 
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <CheckBox
-                android:id="@+id/playedDefenseCheckBox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:onClick="onCheckBoxClicked"
-                android:text="Played Defense"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.158"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.06" />
-
-
-        </TableRow>
-
-        <TableRow>
-
-            <CheckBox
-                android:id="@+id/GotDefendedCheckBox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:onClick="onCheckBoxClicked"
-                android:text="Got Defended"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                app:layout_constraintHorizontal_bias="0.158"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.06" />
-
-
-        </TableRow>
-    </TableLayout>
+    <CheckBox
+        android:id="@+id/GotDefendedCheckBox"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_rectangle"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Got Defended"
+        android:textColor="@color/maroon1"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.213" />
 
     <Button
         android:id="@+id/TeleopUpperCubeDecrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_purple"
         android:text="-"
         android:textColor="@color/white"
@@ -133,8 +109,8 @@
 
     <Button
         android:id="@+id/TeleopUpperCubeIncrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_purple"
         android:text="+"
         android:textColor="@color/white"
@@ -148,23 +124,23 @@
 
     <Button
         android:id="@+id/TeleopUpperConeDecrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_yellow"
         android:text="-"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintHorizontal_bias="0.002"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.459" />
 
     <Button
         android:id="@+id/TeleopUpperConeIncrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_yellow"
         android:text="+"
         android:textColor="@color/black"
@@ -178,8 +154,8 @@
 
     <Button
         android:id="@+id/TeleopMiddleCubeDecrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_purple"
         android:text="-"
         android:textColor="@color/white"
@@ -221,8 +197,8 @@
 
     <Button
         android:id="@+id/TeleopMiddleCubeIncrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_purple"
         android:text="+"
         android:textColor="@color/white"
@@ -236,15 +212,15 @@
 
     <Button
         android:id="@+id/TeleopMiddleConeDecrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_yellow"
         android:text="-"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintHorizontal_bias="0.002"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.681" />
@@ -265,8 +241,8 @@
 
     <Button
         android:id="@+id/TeleopMiddleConeIncrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_yellow"
         android:text="+"
         android:textColor="@color/black"
@@ -309,8 +285,8 @@
 
     <Button
         android:id="@+id/TeleopHybridCubeDecrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_purple"
         android:text="-"
         android:textColor="@color/white"
@@ -324,23 +300,23 @@
 
     <Button
         android:id="@+id/TeleopHybridConeDecrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_yellow"
         android:text="-"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintHorizontal_bias="0.002"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.919" />
 
     <Button
         android:id="@+id/TeleopHybridCubeIncrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_purple"
         android:text="+"
         android:textColor="@color/white"
@@ -425,8 +401,8 @@
 
     <Button
         android:id="@+id/TeleopHybridConeIncrease"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/round_button_yellow"
         android:text="+"
         android:textColor="@color/black"
