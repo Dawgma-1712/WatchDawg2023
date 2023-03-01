@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener{
 
+    public static EditText eventKeyText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +17,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_home_screen);
 
         findViewById (R.id.startMatch).setOnClickListener(this);
-        findViewById(R.id.pitScouting).setOnClickListener(this);
 
-
+        eventKeyText = (EditText)  findViewById(R.id.eventKey);
 
     }
 
@@ -29,11 +29,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             case R.id.startMatch:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
-                break;
-
-            case R.id.pitScouting:
-                Intent i = new Intent(this, PitScouting.class);
-                startActivity(i);
                 break;
 
 

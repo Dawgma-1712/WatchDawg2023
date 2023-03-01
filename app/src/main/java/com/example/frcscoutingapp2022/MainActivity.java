@@ -48,22 +48,15 @@ public class MainActivity extends AppCompatActivity {
     public static int Parking = 0;
     public static int TeleopDocked = 0;
     public static int TeleopEngaged = 0;
-    public static int penalty = 0;
     public static int deadBot = 0;
 
-    public static int AutoUpperCone = 0;
-    public static int AutoUpperCube = 0;
-    public static int AutoMiddleCone = 0;
-    public static int AutoMiddleCube = 0;
-    public static int AutoHybridCone = 0;
-    public static int AutoHybridCube = 0;
+    public static int[] autoUpperNodes = {0,0,0,0,0,0,0,0,0};
 
-    public static int TeleopUpperCone = 0;
-    public static int TeleopUpperCube = 0;
-    public static int TeleopMiddleCone = 0;
-    public static int TeleopMiddleCube = 0;
-    public static int TeleopHybridCone = 0;
-    public static int TeleopHybridCube = 0;
+    public static int[] autoMiddleNodes = {0,0,0,0,0,0,0,0,0};
+
+    public static int[] autoHybridNodes = {0,0,0,0,0,0,0,0,0};
+    
+    
 
 
     @Override
@@ -99,23 +92,9 @@ public class MainActivity extends AppCompatActivity {
         Parking = 0;
         TeleopDocked = 0;
         TeleopEngaged = 0;
-        penalty = 0;
         deadBot = 0;
 
-
-        AutoUpperCone = 0;
-        AutoUpperCube = 0;
-        AutoMiddleCone = 0;
-        AutoMiddleCube = 0;
-        AutoHybridCone = 0;
-        AutoHybridCube = 0;
-
-        TeleopUpperCone = 0;
-        TeleopUpperCube = 0;
-        TeleopMiddleCone = 0;
-        TeleopMiddleCube = 0;
-
-
+        
     }
 
     public static void editMatchData(int ind0, int ind1, int value) {
@@ -128,33 +107,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Check which one clicked
         switch (view.getId()) {
-            case R.id.playedDefenseCheckBox:
-                //MainActivity.checkBoxData[2] = checked ? 1 : 0;
-                MainActivity.playedDefense = checked ? 1 : 0;
-
-                break;
-            case R.id.GotDefendedCheckBox:
-                //MainActivity.checkBoxData[3] = checked ? 1 : 0;
-                MainActivity.defendedOn = checked ? 1 : 0;
-
-                break;
 
 
             case R.id.MobilityCheckBox:
                 //MainActivity.checkBoxData[16] = checked ? 1 : 0;
                 MainActivity.mobility = checked ? 1 : 0;
-
                 break;
-            case R.id.penalized:
-                //MainActivity.checkBoxData[17] = checked ? 1 : 0;
-                MainActivity.penalty = checked ? 1 : 0;
 
-                break;
-            case R.id.deadBot:
-                //MainActivity.checkBoxData[18] = checked ? 1 : 0;
-                MainActivity.deadBot = checked ? 1 : 0;
 
-                break;
 
         }
 
@@ -166,15 +126,6 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup AutoRadioGroup = (RadioGroup)findViewById(R.id.AutoRadioGroup);
 
         switch (view.getId()) {
-            case R.id.blue:
-                MainActivity.alliance = 1;
-                System.out.println(MainActivity.alliance);
-                break;
-
-            case R.id.red:
-                MainActivity.alliance = 0;
-                System.out.println(MainActivity.alliance);
-                break;
 
 
             case R.id.AutoDocked:

@@ -4,41 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
+    android:background="@color/lightGrey"
     tools:context=".Auto">
 
     <!-- TODO: Update blank fragment layout -->
 
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="722dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.716" />
 
+    <TextView
+        android:id="@+id/AutoHybridLabel"
+        android:layout_width="766dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Hybrid"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
 
     <View
         android:id="@+id/divider1"
-        android:layout_width="550dp"
-        android:layout_height="5dp"
+        android:layout_width="715dp"
+        android:layout_height="6dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.457" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="550dp"
-        android:layout_height="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:background="@android:color/white"
+    <TextView
+        android:id="@+id/AutoMiddleLabel"
+        android:layout_width="766dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Middle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/AutoRadioGroup"
@@ -48,10 +79,10 @@
         android:translationY="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.808"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142">
+        app:layout_constraintVertical_bias="0.099">
 
         <RadioButton
             android:id="@+id/AutoDocked"
@@ -62,7 +93,7 @@
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
             android:text="Docked"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <RadioButton
@@ -73,263 +104,9 @@
             android:buttonTint="#1A99C4"
             android:onClick="onRadioButtonClicked"
             android:text="Engaged"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
     </RadioGroup>
-
-    <Button
-        android:id="@+id/AutoHybridCubeIncrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_purple"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
-
-    <Button
-        android:id="@+id/AutoHybridConeIncrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_yellow"
-        android:text="+"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973" />
-
-    <TextView
-        android:id="@+id/AutoHybridCubeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928" />
-
-    <TextView
-        android:id="@+id/AutoHybridConeLabel"
-        android:layout_width="94dp"
-        android:layout_height="38dp"
-        android:gravity="center"
-        android:text="Cone"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844" />
-
-    <Button
-        android:id="@+id/AutoHybridConeDecrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_yellow"
-        android:text="-"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
-
-    <Button
-        android:id="@+id/AutoHybridCubeDecrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_purple"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972" />
-
-    <TextView
-        android:id="@+id/AutoHybridConeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927" />
-
-    <TextView
-        android:id="@+id/AutoHybridCubeLabel"
-        android:layout_width="76dp"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:text="Cube"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.848" />
-
-    <TextView
-        android:id="@+id/AutoHybridLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Hybrid"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
-
-    <Button
-        android:id="@+id/AutoUpperCubeIncrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_purple"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487" />
-
-    <Button
-        android:id="@+id/AutoUpperConeIncrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_yellow"
-        android:text="+"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
-
-    <Button
-        android:id="@+id/AutoUpperCubeDecrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_purple"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487" />
-
-    <TextView
-        android:id="@+id/AutoUpperConeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
-
-    <TextView
-        android:id="@+id/TeleopUpperConeLabel"
-        android:layout_width="125dp"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="Cone"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
-    <Button
-        android:id="@+id/AutoUpperConeDecrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_yellow"
-        android:text="-"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
-
-    <TextView
-        android:id="@+id/TeleopUpperCubeLabel"
-        android:layout_width="125dp"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="Cube"
-        android:textSize="30dp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
-    <TextView
-        android:id="@+id/AutoUpperCubeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
         android:id="@+id/AutoUpperLabel"
@@ -337,168 +114,36 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Upper"
-        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.232" />
 
     <TextView
         android:id="@+id/autoUpperLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Alliance"
+        android:text="Team Position:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
-
-    <Button
-        android:id="@+id/AutoMiddleCubeIncrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_purple"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.969"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
-
-    <TextView
-        android:id="@+id/AutoMiddleLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Middle"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611" />
-
-    <Button
-        android:id="@+id/AutoMiddleConeIncrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_yellow"
-        android:text="+"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
-
-    <TextView
-        android:id="@+id/AutoMiddleCubeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
-
-    <TextView
-        android:id="@+id/TeleopMiddleConeLabel"
-        android:layout_width="79dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Cone"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
-
-    <Button
-        android:id="@+id/AutoMiddleConeDecrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_yellow"
-        android:text="-"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
-
-    <TextView
-        android:id="@+id/AutoMiddleConeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
-
-    <TextView
-        android:id="@+id/AutoMiddelCubeLabel"
-        android:layout_width="82dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Cube"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.77"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
-
-    <Button
-        android:id="@+id/AutoMiddleCubeDecrease"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/round_button_purple"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <CheckBox
         android:id="@+id/MobilityCheckBox"
-        android:layout_width="217dp"
+        android:layout_width="218dp"
         android:layout_height="47dp"
         android:background="@drawable/round_rectangle"
         android:button="@null"
@@ -508,49 +153,369 @@
         android:minHeight="48dp"
         android:onClick="onCheckBoxClicked"
         android:text="Mobility"
-        android:textColor="@color/maroon1"
+        android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintVertical_bias="0.053" />
 
-    <RadioGroup
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142"
-        android:layout_marginBottom="40dp">
+        app:layout_constraintVertical_bias="0.332">
 
-        <RadioButton
-            android:id="@+id/blue"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:textColor="@color/white"
-            android:textSize="20dp"
+        <Button
+            android:id="@+id/coneNode1"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:buttonTint="#1A99C4"
-            android:onClick="onRadioButtonClicked"
-            android:text="Blue" />
+            android:onClick="onClick" />
 
-        <RadioButton
-            android:id="@+id/red"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:textColor="@color/white"
+        <Button
+            android:id="@+id/cubeNode1"
+            style="@style/CubeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:buttonTint="#1A99C4"
-            android:onClick="onRadioButtonClicked"
-            android:text="Red" />
-    </RadioGroup>
+            android:background="@drawable/rectangle_button_purple"
+            android:onClick="onClick" />
+
+
+        <Button
+            android:id="@+id/coneNode2"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode3"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/cubeNode2"
+            style="@style/CubeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_button_purple"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode5"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode4"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/cubeNode3"
+            style="@style/CubeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_button_purple"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode6"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62">
+
+        <Button
+            android:id="@+id/coneNode7"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/cubeNode4"
+            style="@style/CubeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_button_purple"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode8"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode9"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/cubeNode5"
+            style="@style/CubeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_button_purple"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode10"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode11"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/cubeNode6"
+            style="@style/CubeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_button_purple"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/coneNode12"
+            style="@style/ConeNode"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9">
+
+        <Button
+            android:id="@+id/hybridNode0"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode1"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode2"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode3"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode4"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode5"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode6"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode7"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/hybridNode8"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/alliancePos"
+        android:layout_width="237dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

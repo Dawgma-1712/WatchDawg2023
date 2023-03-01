@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "@color/maroon2"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,41 +19,44 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="2dp"
         android:layout_width="match_parent"
-        android:layout_height="865dp"
-        android:layout_marginTop="3dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabs"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        android:layout_width="603dp"
-        android:layout_height="85dp"
+        android:layout_width="766dp"
+        android:layout_height="75dp"
         android:layout_marginTop="56dp"
-        android:background="@color/maroon1"
+        android:background="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.021"
         app:tabTextColor="@color/white" />
 
     <View
+        android:id="@+id/view3"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/watch_dog"
+        android:background="@drawable/ftc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <EditText
         android:id="@+id/teamNum"
@@ -75,8 +78,8 @@
         android:layout_width="122dp"
         android:layout_height="46dp"
         android:hint="Match Num"
-        android:textColor="@color/white"
         android:inputType="number"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,9 +92,9 @@
         android:layout_width="122dp"
         android:layout_height="46dp"
         android:hint="Scout Name"
+        android:inputType="text"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.935"

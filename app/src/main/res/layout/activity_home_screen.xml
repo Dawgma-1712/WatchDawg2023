@@ -4,37 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
+    android:background="@color/lightGrey"
     tools:context=".HomeScreen">
 
     <Button
         android:id="@+id/startMatch"
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:background="@color/white"
+        android:background="@color/teal_700"
         android:text="Start Match"
-        android:textColor="@color/maroon1"
-        android:textSize = "30dp"
+        android:textColor="@color/black"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.884" />
 
-    <Button
-        android:id="@+id/pitScouting"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:background="@color/white"
-        android:text="Pit Scouting"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="572dp"
+        android:text="Event Key:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
         android:textSize="30dp"
-        android:textColor="@color/maroon1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startMatch"
-        app:layout_constraintVertical_bias="0.249" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Event Key:" />
+
+    <EditText
+        android:id="@+id/eventKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="652dp"
+        android:backgroundTint="#515151"
+        android:ems="20"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="324dp"
+        android:layout_height="273dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="216dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ftc" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="456dp"
+        android:fontFamily="@font/battlefieldv5bold"
+        android:text="The Flying Toasters' scouting"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

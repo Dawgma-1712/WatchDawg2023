@@ -1,5 +1,6 @@
 package com.example.frcscoutingapp2022;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,69 +14,48 @@ import android.widget.TextView;
 public class Teleop extends Fragment implements View.OnClickListener{
 
     //initialize variables
+    private int[] upperNodes = {0,0,0,0,0,0,0,0,0};
 
+    private int[] middleNodes = {0,0,0,0,0,0,0,0,0};
 
-
-    //Initialize upper node text views
-    private TextView TeleopUpperConeText;
-    private TextView TeleopUpperCubeText;
-
-    //initialize middle node text views
-    private TextView TeleopMiddleCubeText;
-    private TextView TeleopMiddleConeText;
-
-    //initializer hybrid node text views
-    private TextView TeleopHybridConeText;
-    private TextView TeleopHybridCubeText;
-
-    //counter variables
-    private int TeleopUpperConeCounter = 0;
-    private int TeleopUpperCubeCounter = 0;
-    private int TeleopMiddleConeCounter = 0;
-    private int TeleopMiddleCubeCounter = 0;
-    private int TeleopHybridConeCounter = 0;
-    private int TeleopHybridCubeCounter = 0;
+    private int[] hybridNodes = {0,0,0,0,0,0,0,0,0};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_teleop, container, false);
 
+        view.findViewById(R.id.coneNode1).setOnClickListener(this);
+        view.findViewById(R.id.cubeNode1).setOnClickListener(this);
+        view.findViewById(R.id.coneNode2).setOnClickListener(this);
+        view.findViewById(R.id.coneNode3).setOnClickListener(this);
+        view.findViewById(R.id.cubeNode2).setOnClickListener(this);
+        view.findViewById(R.id.coneNode4).setOnClickListener(this);
+        view.findViewById(R.id.coneNode5).setOnClickListener(this);
+        view.findViewById(R.id.cubeNode3).setOnClickListener(this);
+        view.findViewById(R.id.coneNode6).setOnClickListener(this);
 
-        //Define TextViews
-        TeleopUpperConeText = (TextView) view.findViewById(R.id.TeleopUpperConeCounter);
-        TeleopUpperCubeText = (TextView) view.findViewById(R.id.TeleopUpperCubeCounter);
+        //Middle Row Buttons
+        view.findViewById(R.id.coneNode7).setOnClickListener(this);
+        view.findViewById(R.id.cubeNode4).setOnClickListener(this);
+        view.findViewById(R.id.coneNode8).setOnClickListener(this);
+        view.findViewById(R.id.coneNode9).setOnClickListener(this);
+        view.findViewById(R.id.cubeNode5).setOnClickListener(this);
+        view.findViewById(R.id.coneNode10).setOnClickListener(this);
+        view.findViewById(R.id.coneNode11).setOnClickListener(this);
+        view.findViewById(R.id.cubeNode6).setOnClickListener(this);
+        view.findViewById(R.id.coneNode12).setOnClickListener(this);
 
-        TeleopMiddleConeText = (TextView) view.findViewById(R.id.TeleopMiddleConeCounter);
-        TeleopMiddleCubeText = (TextView) view.findViewById(R.id.TeleopMiddleCubeCounter);
-
-        TeleopHybridConeText = (TextView) view.findViewById(R.id.TeleopHybridConeCounter);
-        TeleopHybridCubeText = (TextView) view.findViewById(R.id.TeleopHybridCubeCounter);
-
-
-
-
-
-        //Upper buttons
-        view.findViewById(R.id.TeleopUpperConeIncrease).setOnClickListener(this);
-        view.findViewById(R.id.TeleopUpperConeDecrease).setOnClickListener(this);
-
-        view.findViewById(R.id.TeleopUpperCubeIncrease).setOnClickListener(this);
-        view.findViewById(R.id.TeleopUpperCubeDecrease).setOnClickListener(this);
-
-        //Middle buttons
-        view.findViewById(R.id.TeleopMiddleConeIncrease).setOnClickListener(this);
-        view.findViewById(R.id.TeleopMiddleConeDecrease).setOnClickListener(this);
-
-        view.findViewById(R.id.TeleopMiddleCubeIncrease).setOnClickListener(this);
-        view.findViewById(R.id.TeleopMiddleCubeDecrease).setOnClickListener(this);
-
-        //Hybrid Buttons
-        view.findViewById(R.id.TeleopHybridConeIncrease).setOnClickListener(this);
-        view.findViewById(R.id.TeleopHybridConeDecrease).setOnClickListener(this);
-
-        view.findViewById(R.id.TeleopHybridCubeIncrease).setOnClickListener(this);
-        view.findViewById(R.id.TeleopHybridCubeDecrease).setOnClickListener(this);
+        //Hybrid Row Buttons
+        view.findViewById(R.id.hybridNode0).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode1).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode2).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode3).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode4).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode5).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode6).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode7).setOnClickListener(this);
+        view.findViewById(R.id.hybridNode8).setOnClickListener(this);
 
         return view;
     }
@@ -84,135 +64,367 @@ public class Teleop extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-
         switch(view.getId()){
-            case R.id.TeleopUpperConeIncrease:
-                System.out.println(MainActivity.checkBoxData);
-                TeleopUpperConeCounter++;
-                TeleopUpperConeText.setText(Integer.toString(TeleopUpperConeCounter));
-                //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] + 1);
-                MainActivity.TeleopUpperCone++;
+            case R.id.coneNode1:
+                if(upperNodes[0] == 0) {
+                    upperNodes[0] = 1;
+                    MainActivity.autoUpperNodes[0] = 1;
+                    view.findViewById(R.id.coneNode1).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (upperNodes[0] == 1) {
+                    upperNodes[0] = 0;
+                    MainActivity.autoUpperNodes[0] = 0;
+                    view.findViewById(R.id.coneNode1).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
                 break;
 
-            case R.id.TeleopUpperConeDecrease:
-                if(TeleopUpperConeCounter > 0) {
-                    TeleopUpperConeCounter--;
-                    TeleopUpperConeText.setText(Integer.toString(TeleopUpperConeCounter));
-                    //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] - 1);
-                    MainActivity.TeleopUpperCone--;
-                } break;
-
-            case R.id.TeleopUpperCubeIncrease:
-                TeleopUpperCubeCounter++;
-                TeleopUpperCubeText.setText(Integer.toString(TeleopUpperCubeCounter));
-                //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] + 1);
-                MainActivity.TeleopUpperCube++;
+            case R.id.cubeNode1:
+                if(upperNodes[1] == 0){
+                    upperNodes[1] = 2;
+                    MainActivity.autoUpperNodes[1] = 2;
+                    view.findViewById(R.id.cubeNode1).setBackgroundColor(Color.parseColor("#bb00ff"));
+                } else if (upperNodes[1] == 2) {
+                    upperNodes[1] = 0;
+                    MainActivity.autoUpperNodes[1] = 0;
+                    view.findViewById(R.id.cubeNode1).setBackgroundColor(Color.parseColor("#7600bc"));
+                }
                 break;
 
-            case R.id.TeleopUpperCubeDecrease:
-                if(TeleopUpperCubeCounter > 0) {
-                    TeleopUpperCubeCounter--;
-                    TeleopUpperCubeText.setText(Integer.toString(TeleopUpperCubeCounter));
-                    //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] - 1);
-                    MainActivity.TeleopUpperCube--;
-                } break;
-
-            case R.id.TeleopMiddleConeIncrease:
-                TeleopMiddleConeCounter++;
-                TeleopMiddleConeText.setText(Integer.toString(TeleopMiddleConeCounter));
-                //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] + 1);
-                MainActivity.TeleopMiddleCone++;
-                System.out.println(MainActivity.TeleopMiddleCone);
+            case R.id.coneNode2:
+                if(upperNodes[2] == 0) {
+                    upperNodes[2] = 1;
+                    MainActivity.autoUpperNodes[2] = 1;
+                    view.findViewById(R.id.coneNode2).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (upperNodes[2] == 1) {
+                    upperNodes[2] = 0;
+                    MainActivity.autoUpperNodes[2] = 0;
+                    view.findViewById(R.id.coneNode2).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
                 break;
 
-            case R.id.TeleopMiddleConeDecrease:
-                if(TeleopMiddleConeCounter > 0) {
-                    TeleopMiddleConeCounter--;
-                    TeleopMiddleConeText.setText(Integer.toString(TeleopMiddleConeCounter));
-                    //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
-                    MainActivity.TeleopMiddleCone--;
-                    System.out.println(MainActivity.TeleopMiddleCone);
-
-                } break;
-
-            case R.id.TeleopMiddleCubeIncrease:
-                TeleopMiddleCubeCounter++;
-                TeleopMiddleCubeText.setText(Integer.toString(TeleopMiddleCubeCounter));
-                //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] + 1);
-                MainActivity.TeleopMiddleCube++;
+            case R.id.coneNode3:
+                if(upperNodes[3] == 0) {
+                    upperNodes[3] = 1;
+                    MainActivity.autoUpperNodes[3] = 1;
+                    view.findViewById(R.id.coneNode3).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (upperNodes[3] == 1) {
+                    upperNodes[3] = 0;
+                    MainActivity.autoUpperNodes[3] = 0;
+                    view.findViewById(R.id.coneNode3).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
                 break;
 
-            case R.id.TeleopMiddleCubeDecrease:
-                if(TeleopMiddleCubeCounter > 0) {
-                    TeleopMiddleCubeCounter--;
-                    TeleopMiddleCubeText.setText(Integer.toString(TeleopMiddleCubeCounter));
-                    //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
-                    MainActivity.TeleopMiddleCube--;
-                } break;
-
-            case R.id.TeleopHybridConeIncrease:
-                System.out.print("HIt");
-                TeleopHybridConeCounter++;
-                TeleopHybridConeText.setText(Integer.toString(TeleopHybridConeCounter));
-                //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] + 1);
-                MainActivity.TeleopHybridCone++;
-                System.out.println(MainActivity.TeleopHybridCone);
+            case R.id.cubeNode2:
+                if(upperNodes[4] == 0){
+                    upperNodes[4] = 2;
+                    MainActivity.autoUpperNodes[4] = 2;
+                    view.findViewById(R.id.cubeNode2).setBackgroundColor(Color.parseColor("#bb00ff"));
+                } else if (upperNodes[4] == 2) {
+                    upperNodes[4] = 0;
+                    MainActivity.autoUpperNodes[4] = 0;
+                    view.findViewById(R.id.cubeNode2).setBackgroundColor(Color.parseColor("#7600bc"));
+                }
                 break;
 
-            case R.id.TeleopHybridConeDecrease:
-                if(TeleopHybridConeCounter > 0) {
-                    TeleopHybridConeCounter--;
-                    TeleopHybridConeText.setText(Integer.toString(TeleopHybridConeCounter));
-                    //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
-                    MainActivity.TeleopHybridCone--;
-                    System.out.println(MainActivity.TeleopHybridCone);
-
-                } break;
-
-            case R.id.TeleopHybridCubeIncrease:
-                TeleopHybridCubeCounter++;
-                TeleopHybridCubeText.setText(Integer.toString(TeleopHybridCubeCounter));
-                //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] + 1);
-                MainActivity.TeleopHybridCube++;
+            case R.id.coneNode4:
+                if(upperNodes[5] == 0) {
+                    upperNodes[5] = 1;
+                    MainActivity.autoUpperNodes[5] = 1;
+                    view.findViewById(R.id.coneNode4).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (upperNodes[5] == 1) {
+                    upperNodes[5] = 0;
+                    MainActivity.autoUpperNodes[5] = 0;
+                    view.findViewById(R.id.coneNode4).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
                 break;
 
-            case R.id.TeleopHybridCubeDecrease:
-                if(TeleopHybridCubeCounter > 0) {
-                    TeleopHybridCubeCounter--;
-                    TeleopHybridCubeText.setText(Integer.toString(TeleopHybridCubeCounter));
-                    //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
-                    MainActivity.TeleopHybridCube--;
-                } break;
+            case R.id.coneNode5:
+                if(upperNodes[6] == 0) {
+                    upperNodes[6] = 1;
+                    MainActivity.autoUpperNodes[6] = 1;
+                    view.findViewById(R.id.coneNode5).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (upperNodes[6] == 1) {
+                    upperNodes[6] = 0;
+                    MainActivity.autoUpperNodes[6] = 0;
+                    view.findViewById(R.id.coneNode5).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.cubeNode3:
+                if(upperNodes[7] == 0){
+                    upperNodes[7] = 2;
+                    MainActivity.autoUpperNodes[7] = 2;
+                    view.findViewById(R.id.cubeNode3).setBackgroundColor(Color.parseColor("#bb00ff"));
+                } else if (upperNodes[7] == 2) {
+                    upperNodes[7] = 0;
+                    MainActivity.autoUpperNodes[7] = 0;
+                    view.findViewById(R.id.cubeNode3).setBackgroundColor(Color.parseColor("#7600bc"));
+                }
+                break;
+
+            case R.id.coneNode6:
+                if(upperNodes[8] == 0) {
+                    upperNodes[8] = 1;
+                    MainActivity.autoUpperNodes[8] = 1;
+                    view.findViewById(R.id.coneNode6).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (upperNodes[8] == 1) {
+                    upperNodes[5] = 0;
+                    MainActivity.autoUpperNodes[8] = 0;
+                    view.findViewById(R.id.coneNode6).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.coneNode7:
+                if(middleNodes[0] == 0) {
+                    middleNodes[0] = 1;
+                    MainActivity.autoMiddleNodes[0] = 1;
+                    view.findViewById(R.id.coneNode7).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (middleNodes[0] == 1) {
+                    middleNodes[0] = 0;
+                    MainActivity.autoMiddleNodes[0] = 0;
+                    view.findViewById(R.id.coneNode7).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.cubeNode4:
+                if(middleNodes[1] == 0){
+                    middleNodes[1] = 2;
+                    MainActivity.autoMiddleNodes[1] = 2;
+                    view.findViewById(R.id.cubeNode4).setBackgroundColor(Color.parseColor("#bb00ff"));
+                } else if (middleNodes[1] == 2) {
+                    middleNodes[1] = 0;
+                    MainActivity.autoMiddleNodes[1] = 0;
+                    view.findViewById(R.id.cubeNode4).setBackgroundColor(Color.parseColor("#7600bc"));
+                }
+                break;
+
+            case R.id.coneNode8:
+                if(middleNodes[2] == 0) {
+                    middleNodes[2] = 1;
+                    MainActivity.autoMiddleNodes[0] = 1;
+                    view.findViewById(R.id.coneNode8).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (middleNodes[2] == 1) {
+                    middleNodes[2] = 0;
+                    MainActivity.autoMiddleNodes[2] = 0;
+                    view.findViewById(R.id.coneNode8).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.coneNode9:
+                if(middleNodes[3] == 0) {
+                    middleNodes[3] = 1;
+                    MainActivity.autoMiddleNodes[3] = 1;
+                    view.findViewById(R.id.coneNode9).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (middleNodes[3] == 1) {
+                    middleNodes[3] = 0;
+                    MainActivity.autoMiddleNodes[3] = 0;
+                    view.findViewById(R.id.coneNode9).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.cubeNode5:
+                if(middleNodes[4] == 0){
+                    middleNodes[4] = 2;
+                    MainActivity.autoMiddleNodes[4] = 2;
+                    view.findViewById(R.id.cubeNode5).setBackgroundColor(Color.parseColor("#bb00ff"));
+                } else if (middleNodes[4] == 2) {
+                    middleNodes[4] = 0;
+                    MainActivity.autoMiddleNodes[4] = 0;
+                    view.findViewById(R.id.cubeNode5).setBackgroundColor(Color.parseColor("#7600bc"));
+                }
+                break;
+
+            case R.id.coneNode10:
+                if(middleNodes[5] == 0) {
+                    middleNodes[5] = 1;
+                    MainActivity.autoMiddleNodes[5] = 1;
+                    view.findViewById(R.id.coneNode10).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (middleNodes[5] == 1) {
+                    middleNodes[5] = 0;
+                    MainActivity.autoMiddleNodes[5] = 0;
+                    view.findViewById(R.id.coneNode10).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.coneNode11:
+                if(middleNodes[6] == 0) {
+                    middleNodes[6] = 1;
+                    MainActivity.autoMiddleNodes[6] = 1;
+                    view.findViewById(R.id.coneNode11).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (middleNodes[6] == 1) {
+                    middleNodes[6] = 0;
+                    MainActivity.autoMiddleNodes[6] = 0;
+                    view.findViewById(R.id.coneNode11).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.cubeNode6:
+                if(middleNodes[7] == 0){
+                    middleNodes[7] = 2;
+                    MainActivity.autoMiddleNodes[7] = 2;
+                    view.findViewById(R.id.cubeNode6).setBackgroundColor(Color.parseColor("#bb00ff"));
+                } else if (middleNodes[7] == 2) {
+                    middleNodes[7] = 0;
+                    MainActivity.autoMiddleNodes[7] = 0;
+                    view.findViewById(R.id.cubeNode6).setBackgroundColor(Color.parseColor("#7600bc"));
+                }
+                break;
+
+            case R.id.coneNode12:
+                if(middleNodes[8] == 0) {
+                    middleNodes[8] = 1;
+                    MainActivity.autoMiddleNodes[8] = 1;
+                    view.findViewById(R.id.coneNode12).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (middleNodes[8] == 1) {
+                    middleNodes[8] = 0;
+                    MainActivity.autoMiddleNodes[8] = 0;
+                    view.findViewById(R.id.coneNode12).setBackgroundColor(Color.parseColor("#ffff00"));
+                }
+                break;
+
+            case R.id.hybridNode0:
+                if (hybridNodes[0] == 0) {
+                    hybridNodes[0] = 1;
+                    MainActivity.autoHybridNodes[0] = 1;
+                    view.findViewById(R.id.hybridNode0).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[0] == 1){
+                    hybridNodes[0] = 2;
+                    MainActivity.autoHybridNodes[0] = 2;
+                    view.findViewById(R.id.hybridNode0).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[0] == 2){
+                    hybridNodes[0] = 0;
+                    MainActivity.autoHybridNodes[0] = 0;
+                    view.findViewById(R.id.hybridNode0).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode1:
+                if (hybridNodes[1] == 0) {
+                    hybridNodes[1] = 1;
+                    MainActivity.autoHybridNodes[1] = 1;
+                    view.findViewById(R.id.hybridNode1).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[1] == 1){
+                    hybridNodes[1] = 2;
+                    MainActivity.autoHybridNodes[1] = 2;
+                    view.findViewById(R.id.hybridNode1).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[1] == 2){
+                    hybridNodes[1] = 0;
+                    MainActivity.autoHybridNodes[1] = 0;
+                    view.findViewById(R.id.hybridNode1).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode2:
+                if (hybridNodes[2] == 0) {
+                    hybridNodes[2] = 1;
+                    MainActivity.autoHybridNodes[2] = 1;
+                    view.findViewById(R.id.hybridNode2).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[2] == 1){
+                    hybridNodes[2] = 2;
+                    MainActivity.autoHybridNodes[2] = 2;
+                    view.findViewById(R.id.hybridNode2).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[2] == 2){
+                    hybridNodes[2] = 0;
+                    MainActivity.autoHybridNodes[2] = 0;
+                    view.findViewById(R.id.hybridNode2).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode3:
+                if (hybridNodes[3] == 0) {
+                    hybridNodes[3] = 1;
+                    MainActivity.autoHybridNodes[3] = 1;
+                    view.findViewById(R.id.hybridNode3).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[3] == 1){
+                    hybridNodes[3] = 2;
+                    MainActivity.autoHybridNodes[3] = 2;
+                    view.findViewById(R.id.hybridNode3).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[3] == 2){
+                    hybridNodes[3] = 0;
+                    MainActivity.autoHybridNodes[3] = 0;
+                    view.findViewById(R.id.hybridNode3).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode4:
+                if (hybridNodes[4] == 0) {
+                    hybridNodes[4] = 1;
+                    MainActivity.autoHybridNodes[4] = 1;
+                    view.findViewById(R.id.hybridNode4).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[4] == 1){
+                    hybridNodes[4] = 2;
+                    MainActivity.autoHybridNodes[4] = 2;
+                    view.findViewById(R.id.hybridNode4).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[4] == 2){
+                    hybridNodes[4] = 0;
+                    MainActivity.autoHybridNodes[4] = 0;
+                    view.findViewById(R.id.hybridNode4).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode5:
+                if (hybridNodes[5] == 0) {
+                    hybridNodes[5] = 1;
+                    MainActivity.autoHybridNodes[5] = 1;
+                    view.findViewById(R.id.hybridNode5).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[5] == 1){
+                    hybridNodes[5] = 2;
+                    MainActivity.autoHybridNodes[5] = 2;
+                    view.findViewById(R.id.hybridNode5).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[5] == 2){
+                    hybridNodes[5] = 0;
+                    MainActivity.autoHybridNodes[5] = 0;
+                    view.findViewById(R.id.hybridNode5).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode6:
+                if (hybridNodes[6] == 0) {
+                    hybridNodes[6] = 1;
+                    MainActivity.autoHybridNodes[6] = 1;
+                    view.findViewById(R.id.hybridNode6).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[6] == 1){
+                    hybridNodes[6] = 2;
+                    MainActivity.autoHybridNodes[6] = 2;
+                    view.findViewById(R.id.hybridNode6).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[6] == 2){
+                    hybridNodes[6] = 0;
+                    MainActivity.autoHybridNodes[6] = 0;
+                    view.findViewById(R.id.hybridNode6).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode7:
+                if (hybridNodes[7] == 0) {
+                    hybridNodes[7] = 1;
+                    MainActivity.autoHybridNodes[7] = 1;
+                    view.findViewById(R.id.hybridNode7).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[7] == 1){
+                    hybridNodes[7] = 2;
+                    MainActivity.autoHybridNodes[7] = 2;
+                    view.findViewById(R.id.hybridNode7).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[7] == 2){
+                    hybridNodes[7] = 0;
+                    MainActivity.autoHybridNodes[7] = 0;
+                    view.findViewById(R.id.hybridNode7).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
+            case R.id.hybridNode8:
+                if (hybridNodes[8] == 0) {
+                    hybridNodes[8] = 1;
+                    MainActivity.autoHybridNodes[8] = 1;
+                    view.findViewById(R.id.hybridNode8).setBackgroundColor(Color.parseColor("#cc9602"));
+                } else if (hybridNodes[8] == 1){
+                    hybridNodes[8] = 2;
+                    MainActivity.autoHybridNodes[8] = 2;
+                    view.findViewById(R.id.hybridNode8).setBackgroundColor(Color.parseColor("#4c00a3"));
+                } else if (hybridNodes[8] == 2){
+                    hybridNodes[8] = 0;
+                    MainActivity.autoHybridNodes[8] = 0;
+                    view.findViewById(R.id.hybridNode8).setBackgroundColor(Color.parseColor("#616161"));
+                }
+                break;
         }
     }
 
     public void onResume(){
         super.onResume();
 
-        TeleopUpperConeText.setText(Integer.toString(TeleopUpperConeCounter));
-        TeleopUpperCubeText.setText(Integer.toString(TeleopUpperCubeCounter));
-        TeleopMiddleConeText.setText(Integer.toString(TeleopMiddleConeCounter));
-        TeleopMiddleCubeText.setText(Integer.toString(TeleopMiddleCubeCounter));
-        TeleopHybridConeText.setText(Integer.toString(TeleopHybridConeCounter));
-        TeleopHybridCubeText.setText(Integer.toString(TeleopHybridCubeCounter));
     }
 
     public void clear(){
-        TeleopUpperConeText.setText(Integer.toString(0));
-        TeleopUpperCubeText.setText(Integer.toString(0));
-        TeleopMiddleConeText.setText(Integer.toString(0));
-        TeleopMiddleCubeText.setText(Integer.toString(0));
-        TeleopHybridConeText.setText(Integer.toString(0));
-        TeleopHybridCubeText.setText(Integer.toString(0));
-
-        TeleopUpperConeCounter = 0;
-        TeleopUpperCubeCounter = 0;
-
-        TeleopMiddleConeCounter = 0;
-        TeleopMiddleCubeCounter = 0;
-
-        TeleopHybridConeCounter = 0;
-        TeleopHybridCubeCounter = 0;
 
     }
 
