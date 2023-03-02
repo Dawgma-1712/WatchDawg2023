@@ -15,25 +15,6 @@ import android.widget.TextView;
 
 public class Auto extends Fragment implements View.OnClickListener {
 
-
-    //initialize variables
-
-    //Initialize upper node text views
-    private TextView AutoUpperConeText;
-    private TextView AutoUpperCubeText;
-
-    //initialize Middle node text views
-    private TextView AutoMiddleConeText;
-    private TextView AutoMiddleCubeText;
-
-    //initialize Hybrid node text views
-    private TextView AutoHybridConeText;
-    private TextView AutoHybridCubeText;
-
-
-
-    //counter arrays
-
     private int[] upperNodes = {0,0,0,0,0,0,0,0,0};
 
     private int[] middleNodes = {0,0,0,0,0,0,0,0,0};

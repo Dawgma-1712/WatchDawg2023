@@ -24,6 +24,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class save extends Fragment implements View.OnClickListener{
 
@@ -61,7 +62,10 @@ public class save extends Fragment implements View.OnClickListener{
         switch(view.getId()) {
             case R.id.generateQR:
 
-                try {
+                try{
+                    if (MainActivity.eventKey != null) {
+
+                    }
                     if (MainActivity.teamNumText.getText().toString() != null) {
                         MainActivity.teamNumber = MainActivity.teamNumText.getText().toString();
                     }
@@ -69,16 +73,9 @@ public class save extends Fragment implements View.OnClickListener{
                     if (MainActivity.matchNumText.getText().toString() != null){
                         MainActivity.matchNumber = MainActivity.matchNumText.getText().toString();
                     }
-
-
-
                     if (MainActivity.scoutNameText.getText().toString() != null){
                         MainActivity.scoutName = MainActivity.scoutNameText.getText().toString();
                     }
-                    if (endgame.additionalNotesText.getText().toString() != null){
-                        MainActivity.additionalNotes = endgame.additionalNotesText.getText().toString();
-                    }
-
 
                 }
                 catch (Exception e){
@@ -86,7 +83,28 @@ public class save extends Fragment implements View.OnClickListener{
                 }
 
 
-                data = MainActivity.teamNumber + "," + MainActivity.matchNumber + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+                data = "{" +
+                        "\"e\": " + MainActivity.eventKey + "," +
+                        "\"sN\":" + MainActivity.scoutName + "," +
+                        "\"mN\":" + MainActivity.matchNumber + "," +
+                       // ""p":" + MainActivity.position + "," +
+                        "\"tN\":" + MainActivity.teamNumber + "," +
+                        "\"mOC\":" + MainActivity.mobility + "," +
+                        "\"aACS\": " + MainActivity.Parking + "," +
+                        "\"aCS\":" + MainActivity.AutoDocked + "," +
+                        "\"aTCS:\"" + MainActivity.TeleopDocked + "," +
+                        "\"pFG\":" + MainActivity.groundPickup + "," +
+                        "\"pFPS\":" + MainActivity.playerStation + "," +
+                        "\"rOA\":" + Arrays.toString(MainActivity.autoUpperNodes) + "," +
+                        "\"rTwA\":" + Arrays.toString(MainActivity.autoMiddleNodes) + "," +
+                        "\"rThA\":" + Arrays.toString(MainActivity.autoHybridNodes) + "," +
+                        "\"rOT\":" + Arrays.toString(MainActivity.teleopUpperNodes) + "," +
+                        "\"rTwT\":" + Arrays.toString(MainActivity.teleopMiddleNodes) + "," +
+                        "\"rThT\":" + Arrays.toString(MainActivity.teleopHybridNodes) + "," +
+                        "\"pD\":" + MainActivity.playedDefense + "," +
+                        "\"pS\":" + MainActivity.preventsScoring + "," +
+                        "\"dO\":" + MainActivity.defendsOften + "," +
+                        "\"eD\":" + MainActivity.effectiveDefense + ",";
 
 
                 //Initialize multi format writer
@@ -150,7 +168,7 @@ public class save extends Fragment implements View.OnClickListener{
                 System.out.println(MainActivity.defendedOnByNumber);
 
                 data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
-                        /* Auto */   + MainActivity.mobility +  "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+                        /* Auto */   + MainActivity.mobility +  "," + MainActivity.alliance +  "," + MainActivity.scoutName;
 
 
                 // Create and save file

@@ -26,13 +26,15 @@ public class MainActivity extends AppCompatActivity {
     public static EditText matchNumText;
     public static EditText scoutNameText;
 
+    public static EditText eventKeyText;
+
     public static Bitmap bitmap;
     private static boolean qrReady = false;
 
     public static String teamNumber;
     public static String matchNumber;
     public static String scoutName;
-    public static String additionalNotes;
+    public static String eventKey;
     public static int[][] buttonData;
     public static int[] checkBoxData;
     public static String defendedOnByNumber = "";
@@ -41,21 +43,26 @@ public class MainActivity extends AppCompatActivity {
     public static int mobility = 0;
     public static int alliance = 0;
     public static int playedDefense = 0;
-    public static int defendedOn = 0;
+    public static int effectiveDefense = 0;
+    public static int preventsScoring = 0;
+    public static int defendsOften = 0;
 
     public static int AutoDocked = 0;
     public static int AutoEngaged = 0;
     public static int Parking = 0;
     public static int TeleopDocked = 0;
     public static int TeleopEngaged = 0;
-    public static int deadBot = 0;
+
+    public static int groundPickup = 0;
+    public static int playerStation = 0;
 
     public static int[] autoUpperNodes = {0,0,0,0,0,0,0,0,0};
-
     public static int[] autoMiddleNodes = {0,0,0,0,0,0,0,0,0};
-
     public static int[] autoHybridNodes = {0,0,0,0,0,0,0,0,0};
-    
+
+    public static int[] teleopUpperNodes = {0,0,0,0,0,0,0,0,0};
+    public static int[] teleopMiddleNodes = {0,0,0,0,0,0,0,0,0};
+    public static int[] teleopHybridNodes = {0,0,0,0,0,0,0,0,0};
     
 
 
@@ -84,15 +91,18 @@ public class MainActivity extends AppCompatActivity {
 
         mobility = 0;
         playedDefense = 0;
-        defendedOn = 0;
+        effectiveDefense = 0;
+        preventsScoring = 0;
+        defendsOften = 0;
 
+        groundPickup = 0;
+        playerStation = 0;
 
         AutoDocked = 0;
         AutoEngaged = 0;
         Parking = 0;
         TeleopDocked = 0;
         TeleopEngaged = 0;
-        deadBot = 0;
 
         
     }
@@ -107,14 +117,28 @@ public class MainActivity extends AppCompatActivity {
 
         // Check which one clicked
         switch (view.getId()) {
-
-
             case R.id.MobilityCheckBox:
                 //MainActivity.checkBoxData[16] = checked ? 1 : 0;
                 MainActivity.mobility = checked ? 1 : 0;
                 break;
-
-
+            case R.id.defenseCheckBox:
+                MainActivity.playedDefense = checked ? 1 : 0;
+                break;
+            case R.id.effectiveDefenseCheckBox:
+                MainActivity.effectiveDefense = checked ? 1 : 0;
+                break;
+            case R.id.preventsScoringCheckBox:
+                MainActivity.preventsScoring = checked ? 1 : 0;
+                break;
+            case R.id.defendsOftenCheckBox2:
+                MainActivity.defendsOften = checked ? 1 : 0;
+                break;
+            case R.id.pickupCheckBox:
+                MainActivity.groundPickup = checked ? 1 : 0;
+                break;
+            case R.id.playerStationCheckBox:
+                MainActivity.playerStation = checked ? 1 : 0;
+                break;
 
         }
 

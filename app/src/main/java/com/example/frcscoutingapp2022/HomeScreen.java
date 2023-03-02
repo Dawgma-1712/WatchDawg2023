@@ -29,6 +29,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             case R.id.startMatch:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                MainActivity.eventKey = eventKeyText.getText().toString();
                 break;
 
 
