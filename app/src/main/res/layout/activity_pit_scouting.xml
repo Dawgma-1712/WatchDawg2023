@@ -56,7 +56,7 @@
         <View
             android:id="@+id/view2"
             android:layout_width="341dp"
-            android:layout_height="412dp"
+            android:layout_height="465dp"
             android:layout_marginTop="704dp"
             android:background="@drawable/round_rectangle"
             app:layout_constraintEnd_toEndOf="parent"
@@ -273,6 +273,20 @@
             android:layout_height="46dp"
             android:layout_marginTop="1052dp"
             android:hint="Notes on robot general"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/robotName"
+            android:layout_width="259dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="1108dp"
+            android:hint="Robot Name"
             android:inputType="text"
             android:textColor="@color/black"
             android:textColorHint="@color/black"

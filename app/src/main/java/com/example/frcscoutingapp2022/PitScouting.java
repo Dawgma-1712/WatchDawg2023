@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -43,8 +44,10 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
     private static EditText intakeMethod;
     private static EditText autoRoutine;
     private static EditText notesOnRobot;
+    private static EditText robotName;
 
     private static ImageView iv_output2;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +73,7 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
         numberOfMotors = (EditText) findViewById(R.id.numberOfMotors);
         WheelType = (EditText) findViewById(R.id.WheelType);
         DriveType = (EditText) findViewById(R.id.DriveType);
+        robotName = (EditText) findViewById(R.id.robotName);
 
         iv_output2 = findViewById(R.id.iv_output2);
 
@@ -85,7 +89,7 @@ public class PitScouting extends AppCompatActivity implements View.OnClickListen
 
                 data = TeamNumPit.getText().toString() + ","+Weight.getText().toString()+","+DriveMotors.getText().toString()+","+numberOfMotors.getText().toString()+","+WheelType.getText().toString()+","+DriveType.getText().toString()+","+robotLength.getText().toString()+","+
                         RobotWidth.getText().toString()+"'"+locationOfScoring.getText().toString()+","+notesOnCupOrCone.getText().toString()+","+abilityToDockAndEngage.getText().toString()+","+dockingAndEngagingFeatures.getText().toString()+","+
-                        intakeMethod.getText().toString()+","+autoRoutine.getText().toString()+","+notesOnRobot.getText().toString();
+                        intakeMethod.getText().toString()+","+autoRoutine.getText().toString()+","+notesOnRobot.getText().toString()+","+robotName.getText().toString();
 
                 //Initialize multi format writer
                 MultiFormatWriter writer = new MultiFormatWriter();
