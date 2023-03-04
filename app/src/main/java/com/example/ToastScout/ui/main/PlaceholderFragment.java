@@ -1,4 +1,4 @@
-package com.example.frcscoutingapp2022.ui.main;
+package com.example.ToastScout.ui.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.frcscoutingapp2022.R;
-import com.example.frcscoutingapp2022.databinding.FragmentMainBinding;
+import com.example.ToastScout.databinding.FragmentMainBinding;
 
 /**
  * A placeholder fragment containing a simple view.

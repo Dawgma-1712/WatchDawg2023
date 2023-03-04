@@ -1,4 +1,4 @@
-package com.example.frcscoutingapp2022;
+package com.example.ToastScout;
 
 import android.content.Context;
 

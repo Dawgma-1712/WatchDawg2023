@@ -1,4 +1,4 @@
-package com.example.frcscoutingapp2022.ui.main;
+package com.example.ToastScout.ui.main;
 
 import android.content.Context;
 
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.frcscoutingapp2022.R;
+import com.example.ToastScout.R;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

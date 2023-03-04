@@ -1,4 +1,4 @@
-package com.example.frcscoutingapp2022;
+package com.example.ToastScout;
 
 import android.os.Bundle;
 
@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.RadioButton;
 
 /**
  * A simple {@link Fragment} subclass.

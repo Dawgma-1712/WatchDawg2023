@@ -1,4 +1,4 @@
-package com.example.frcscoutingapp2022;
+package com.example.ToastScout;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -7,9 +7,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.os.ParcelFileDescriptor;
-import android.provider.MediaStore;
-import android.service.controls.actions.BooleanAction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +19,8 @@ import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Locale;
 
 public class save extends Fragment implements View.OnClickListener{
 

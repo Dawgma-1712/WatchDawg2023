@@ -1,4 +1,4 @@
-package com.example.frcscoutingapp2022.ui.main;
+package com.example.ToastScout.ui.main;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
