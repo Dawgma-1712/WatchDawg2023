@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
+import android.service.controls.actions.BooleanAction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class save extends Fragment implements View.OnClickListener{
 
@@ -36,8 +38,12 @@ public class save extends Fragment implements View.OnClickListener{
     public static final int CREATE_FILE = 1;
     public static Uri fileUri;
 
+    public String autoChargeStation = "";
+    public String teleopChargeStation = "";
 
+    public Boolean attemptedCharge = true;
 
+    public Boolean attemptedChargeAuto = true;
     private ImageView ivOutput;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,9 +69,6 @@ public class save extends Fragment implements View.OnClickListener{
             case R.id.generateQR:
 
                 try{
-                    if (MainActivity.eventKey != null) {
-
-                    }
                     if (MainActivity.teamNumText.getText().toString() != null) {
                         MainActivity.teamNumber = MainActivity.teamNumText.getText().toString();
                     }
@@ -76,35 +79,81 @@ public class save extends Fragment implements View.OnClickListener{
                     if (MainActivity.scoutNameText.getText().toString() != null){
                         MainActivity.scoutName = MainActivity.scoutNameText.getText().toString();
                     }
+                    MainActivity.alliance = Auto.position;
+                    if (MainActivity.AutoDocked == 0 && MainActivity.AutoEngaged == 1 && MainActivity.Parking == 0){
+                        autoChargeStation = "Engaged";
+                    } else if (MainActivity.AutoDocked == 1 && MainActivity.AutoEngaged == 0 && MainActivity.Parking == 0){
+                        autoChargeStation = "Docked";
+                    } else {
+                        autoChargeStation = "Not on charging station";
+                        attemptedChargeAuto = false;
+                    }
 
+                    if (MainActivity.TeleopEngaged == 1){
+                        autoChargeStation = "Engaged";
+                    } else if (MainActivity.TeleopDocked == 1 ){
+                        autoChargeStation = "Docked";
+                    } else if (MainActivity.Parking == 1){
+                        autoChargeStation = "In community";
+                    } else if (MainActivity.NotInCommunity == 1){
+                        autoChargeStation = "Not in Community";
+                    }else {
+                        attemptedCharge = false;
+                    }
                 }
                 catch (Exception e){
                     System.out.println(e.getMessage());
                 }
+                Boolean mobility = false;
+                if (MainActivity.mobility == 1){mobility = true;} else {mobility = false;};
+
+                Boolean parking = false;
+                if (MainActivity.Parking == 1){parking = true;} else {parking = false;};
+
+                Boolean gP = false;
+                if (MainActivity.groundPickup == 1){gP = true;} else {gP = false;};
+
+                Boolean pS = false;
+                if (MainActivity.playerStation == 1){pS = true;} else {pS = false;};
+
+                Boolean pD = false;
+                if (MainActivity.playedDefense == 1){pD = true;} else {pD = false;};
+
+                Boolean pScore = false;
+                if (MainActivity.preventsScoring == 1){pScore = true;} else {pScore = false;};
+
+                Boolean dO = false;
+                if (MainActivity.preventsScoring == 1){dO = true;} else {dO = false;};
+
+                Boolean eD = false;
+                if (MainActivity.effectiveDefense == 1){eD = true;} else {eD = false;};
 
 
                 data = "{" +
-                        "\"e\": " + MainActivity.eventKey + "," +
-                        "\"sN\":" + MainActivity.scoutName + "," +
-                        "\"mN\":" + MainActivity.matchNumber + "," +
-                       // ""p":" + MainActivity.position + "," +
-                        "\"tN\":" + MainActivity.teamNumber + "," +
-                        "\"mOC\":" + MainActivity.mobility + "," +
-                        "\"aACS\": " + MainActivity.Parking + "," +
-                        "\"aCS\":" + MainActivity.AutoDocked + "," +
-                        "\"aTCS:\"" + MainActivity.TeleopDocked + "," +
-                        "\"pFG\":" + MainActivity.groundPickup + "," +
-                        "\"pFPS\":" + MainActivity.playerStation + "," +
-                        "\"rOA\":" + Arrays.toString(MainActivity.autoUpperNodes) + "," +
-                        "\"rTwA\":" + Arrays.toString(MainActivity.autoMiddleNodes) + "," +
-                        "\"rThA\":" + Arrays.toString(MainActivity.autoHybridNodes) + "," +
-                        "\"rOT\":" + Arrays.toString(MainActivity.teleopUpperNodes) + "," +
-                        "\"rTwT\":" + Arrays.toString(MainActivity.teleopMiddleNodes) + "," +
-                        "\"rThT\":" + Arrays.toString(MainActivity.teleopHybridNodes) + "," +
-                        "\"pD\":" + MainActivity.playedDefense + "," +
-                        "\"pS\":" + MainActivity.preventsScoring + "," +
-                        "\"dO\":" + MainActivity.defendsOften + "," +
-                        "\"eD\":" + MainActivity.effectiveDefense + ",";
+                        "\"e\":\"" + MainActivity.eventKey + "\"," +
+                        "\"sN\":\"" + MainActivity.scoutName + "\"," +
+                        "\"mN\":\"" + MainActivity.matchNumber + "\"," +
+                        "\"p\":\"" + Auto.alliancePos.getSelectedItem().toString() + "\"," +
+                        "\"tN\":\"" + MainActivity.teamNumber + "\"," +
+                        "\"mOC\":\"" + bSB(mobility) + "\"," +
+                        "\"aACS\":\"" + bSB(attemptedChargeAuto) + "\"," +
+                        "\"aCS\":\"" + autoChargeStation + "\"," +
+                        "\"aTCS\":\"" + bSB(attemptedCharge) + "\"," +
+                        "\"tCS\":\"" + teleopChargeStation + "\"," +
+                        "\"pFG\":\"" + bSB(gP) + "\"," +
+                        "\"pFPS\":\"" + bSB(pS) + "\"," +
+                        "\"rOA\":\"" + Arrays.toString(MainActivity.autoUpperNodes).replaceAll("[\\[\\],\\s]", "") + "\"," +
+                        "\"rTwA\":\"" + Arrays.toString(MainActivity.autoMiddleNodes).replaceAll("[\\[\\],\\s]", "") + "\"," +
+                        "\"rThA\":\"" + Arrays.toString(MainActivity.autoHybridNodes).replaceAll("[\\[\\],\\s]", "") + "\"," +
+                        "\"rOT\":\"" + Arrays.toString(MainActivity.teleopUpperNodes).replaceAll("[\\[\\],\\s]", "") + "\"," +
+                        "\"rTwT\":\"" + Arrays.toString(MainActivity.teleopMiddleNodes).replaceAll("[\\[\\],\\s]", "") + "\"," +
+                        "\"rThT\":\"" + Arrays.toString(MainActivity.teleopHybridNodes).replaceAll("[\\[\\],\\s]", "") + "\"," +
+                        "\"pD\":\"" + bSB(pD) + "\"," +
+                        "\"pS\":\"" + bSB(pScore) + "\"," +
+                        "\"dO\":\"" + bSB(pD) + "\"," +
+                        "\"eD\":\"" + bSB(eD) + "\"," +
+                        "\"mK\":\"" + MainActivity.eventKey +"_" + MainActivity.matchNumber + "\"}";
+
 
 
                 //Initialize multi format writer
@@ -137,7 +186,7 @@ public class save extends Fragment implements View.OnClickListener{
 
                 break;
             case R.id.newMatch2:
-                Intent intent = new Intent(getActivity(), HomeScreen.class);
+                Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
                 break;
 
@@ -188,5 +237,9 @@ public class save extends Fragment implements View.OnClickListener{
 
 
         }
+    }
+
+    public String bSB (Boolean bool){
+        return Boolean.toString(bool).substring(0,1).toUpperCase() + Boolean.toString(bool).substring(1);
     }
 }

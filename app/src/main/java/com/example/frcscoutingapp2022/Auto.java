@@ -21,19 +21,24 @@ public class Auto extends Fragment implements View.OnClickListener {
 
     private int[] hybridNodes = {0,0,0,0,0,0,0,0,0};
 
+    public static Spinner alliancePos;
+    public static String position = "R1";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_auto, container, false);
 
-        Spinner alliancePos = (Spinner) view.findViewById(R.id.alliancePos);
+        alliancePos = (Spinner) view.findViewById(R.id.alliancePos);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getActivity(),
                 R.array.alliance_pos, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         alliancePos.setAdapter(adapter);
+
+        position = alliancePos.getSelectedItem().toString();
                 //Upper Row Buttons
         view.findViewById(R.id.coneNode1).setOnClickListener(this);
         view.findViewById(R.id.cubeNode1).setOnClickListener(this);

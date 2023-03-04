@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static int mobility = 0;
-    public static int alliance = 0;
+    public static String alliance = "";
     public static int playedDefense = 0;
     public static int effectiveDefense = 0;
     public static int preventsScoring = 0;
@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public static int AutoDocked = 0;
     public static int AutoEngaged = 0;
     public static int Parking = 0;
+
+    public static int NotInCommunity = 0;
     public static int TeleopDocked = 0;
     public static int TeleopEngaged = 0;
 
@@ -101,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         AutoDocked = 0;
         AutoEngaged = 0;
         Parking = 0;
+        NotInCommunity = 0;
         TeleopDocked = 0;
         TeleopEngaged = 0;
 
@@ -180,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 else{MainActivity.TeleopEngaged =1;
                 MainActivity.TeleopDocked =0;
                 MainActivity.Parking =0;
+                MainActivity.NotInCommunity = 0;
                 System.out.println(MainActivity.TeleopEngaged);
                 System.out.println(MainActivity.TeleopDocked);
                 System.out.println(MainActivity.Parking);}
@@ -192,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
                 else{MainActivity.TeleopEngaged =0;
                 MainActivity.TeleopDocked =1;
                 MainActivity.Parking =0;
+                MainActivity.NotInCommunity = 0;
                 System.out.println(MainActivity.TeleopEngaged);
                 System.out.println(MainActivity.TeleopDocked);
                 System.out.println(MainActivity.Parking);}
@@ -203,11 +208,26 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{MainActivity.TeleopEngaged =0;
                 MainActivity.TeleopDocked =0;
+                MainActivity.NotInCommunity = 0;
                 MainActivity.Parking =1;
                 System.out.println(MainActivity.TeleopEngaged);
                 System.out.println(MainActivity.TeleopDocked);
                 System.out.println(MainActivity.Parking);}
                 break;
+            case R.id.NotInCommunity:
+                if(MainActivity.NotInCommunity==1){
+                    EndgameRadioGroup.clearCheck();
+                    MainActivity.NotInCommunity=0;
+                }
+                else{MainActivity.TeleopEngaged =0;
+                    MainActivity.TeleopDocked =0;
+                    MainActivity.Parking = 0;
+                    MainActivity.NotInCommunity = 1;
+                    System.out.println(MainActivity.TeleopEngaged);
+                    System.out.println(MainActivity.TeleopDocked);
+                    System.out.println(MainActivity.Parking);}
+                break;
+
         }
 
         boolean checked = ((RadioButton) view).isChecked();
