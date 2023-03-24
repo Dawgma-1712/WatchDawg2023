@@ -69,7 +69,7 @@ You should have the required systems (found below, or [here](https://github.com/
 # Documentation and Files
 [User manual](https://drive.google.com/file/d/1JhdpzxwV_ZGIRtdu5C_5Z7-LB50arDKs/view?usp=sharing)
 
-[Spreadsheet](./2023Mk1.8.1.xlsm)
+[Spreadsheet](./2023Mk2.1.xlsm)
 
 [Match Strategy Sheet](https://docs.google.com/document/d/1MbJxzmmZyDQBnunGYa1kg83b3NqzOpte/edit?usp=sharing&ouid=113372425683476679602&rtpof=true&sd=true) (Download as Microsoft Word Doc)
 
