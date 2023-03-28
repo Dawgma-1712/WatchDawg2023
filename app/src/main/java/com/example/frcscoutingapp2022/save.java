@@ -124,7 +124,7 @@ public class save extends Fragment implements View.OnClickListener{
                 break;
             case R.id.newMatch2:
                 Intent intent = new Intent(getActivity(), HomeScreen.class);
-                MainActivity.TeleopHybridCone = 0;
+                MainActivity.TeleopHybridCone = 0; //rough patch for the hybrid cone/cube issue
                 MainActivity.TeleopHybridCube = 0;
                 startActivity(intent);
                 break;
