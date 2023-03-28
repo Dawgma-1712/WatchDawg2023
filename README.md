@@ -1,7 +1,7 @@
 # WatchDawg 2023
 WatchDawg is a scouting system developed by Team 1712 Dawgma designed to work in venues without cell connection. 
 
-Here's our [tutorial](https://www.youtube.com/watch?v=BxNQ6KTZWIU) on how to use the Pit Scouting portion of the WatchDawg App. <!--maybe split into 2 parts like our videos?-->
+Here's our [tutorial](https://www.youtube.com/watch?v=Qy0VXm0XURE&list=PL6CRczQwn-PNk-rUF2tZoP7egD5Rlj55f) on how to use the Pit Scouting portion of the WatchDawg App. <!--maybe split into 2 parts like our videos?-->
 
 Here's our [tutorial](https://www.youtube.com/watch?v=ftOPcMmmr5I) on how to use the Match Scouting portion of the WatchDawg App.
 
@@ -69,7 +69,7 @@ You should have the required systems (found below, or [here](https://github.com/
 # Documentation and Files
 [User manual](https://drive.google.com/file/d/1JhdpzxwV_ZGIRtdu5C_5Z7-LB50arDKs/view?usp=sharing)
 
-[Spreadsheet](./2023Mk1.8.1.xlsm)
+[Spreadsheet](./2023Mk2.1.xlsm)
 
 [Match Strategy Sheet](https://docs.google.com/document/d/1MbJxzmmZyDQBnunGYa1kg83b3NqzOpte/edit?usp=sharing&ouid=113372425683476679602&rtpof=true&sd=true) (Download as Microsoft Word Doc)
 
